@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj": {}
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj": {
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj",
+        "projectUniqueName": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj",
         "projectName": "DynamiqCore.Application",
-        "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj",
+        "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj",
         "packagesPath": "C:\\Users\\naveed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\obj\\",
+        "outputPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,21 +22,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {
-                "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj"
+              "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {
+                "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj"
               },
-              "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {
-                "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj"
+              "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {
+                "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj"
               }
             }
           }
@@ -54,12 +54,12 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[14.0.0, )"
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
@@ -67,27 +67,27 @@
             },
             "MediatR": {
               "target": "Package",
-              "version": "[12.4.0, )"
+              "version": "[12.5.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.4, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.6.0, )"
+              "version": "[8.8.0, )"
             }
           },
           "imports": [
@@ -110,14 +110,14 @@
         }
       }
     },
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+        "projectUniqueName": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
         "projectName": "DynamiqCore.Domain",
-        "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+        "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
         "packagesPath": "C:\\Users\\naveed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\obj\\",
+        "outputPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -128,15 +128,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -153,12 +153,12 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -181,14 +181,14 @@
         }
       }
     },
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj": {
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj",
         "projectName": "DynamiqCore.Infrastructure",
-        "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj",
+        "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\naveed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\obj\\",
+        "outputPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -199,18 +199,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj": {
-                "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj"
+              "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj": {
+                "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj"
               }
             }
           }
@@ -228,8 +228,8 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Azure.Communication.Email": {
               "target": "Package",
@@ -237,17 +237,17 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -270,14 +270,14 @@
         }
       }
     },
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
+        "projectUniqueName": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
         "projectName": "DynamiqCore.Shared",
-        "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
+        "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
         "packagesPath": "C:\\Users\\naveed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\obj\\",
+        "outputPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

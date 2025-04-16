@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {}
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
+        "projectUniqueName": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
         "projectName": "DynamiqCore.Shared",
-        "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
+        "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\DynamiqCore.Shared.csproj",
         "packagesPath": "C:\\Users\\naveed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\obj\\",
+        "outputPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

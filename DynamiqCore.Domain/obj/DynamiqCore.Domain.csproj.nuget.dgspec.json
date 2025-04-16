@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {}
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {
+    "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+        "projectUniqueName": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
         "projectName": "DynamiqCore.Domain",
-        "projectPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+        "projectPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
         "packagesPath": "C:\\Users\\naveed\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\obj\\",
+        "outputPath": "D:\\Personal\\source\\DynamiqCore\\DynamiqCore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -47,12 +47,12 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
