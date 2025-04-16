@@ -1,0 +1,56 @@
+# Ignore build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Dd]ebugFinal/
+[Dd]eploy/
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+.vscode/
+.vs/
+.vs2019/
+.vs2017/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Thumbs.db and other Windows files
+Thumbs.db
+ehthumbs.db
+
+# Ignore temp files
+*~
+*.bak
+*.swp
+
+# Rider files
+.idea/
+
+# VS Code settings folder
+.vscode/
+
+# Ignore NuGet package files
+packages/
+*.nupkg
+*.nuspec
+
+# Ignore test result files
+TestResults/
+*.testresult
+*.trx
+
+# Log files
+*.log
+
+# .NET specific files
+project.assets.json
+project.nuget.cache
