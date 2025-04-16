@@ -1,0 +1,1075 @@
+2025-03-10 00:00:00.202 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 00:00:00.391 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 191.405ms
+2025-03-10 00:00:00.442 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 00:00:00.456 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 13.6757ms
+2025-03-10 00:00:00.939 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 00:00:01.249 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 310.0308ms
+2025-03-10 00:00:13.883 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 00:00:13.892 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 00:00:14.072 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 00:00:14.082 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 00:00:14.087 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 401 0 null 203.6723ms
+2025-03-10 00:00:19.259 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 00:00:19.268 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 00:00:19.272 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 00:00:19.274 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 401 0 null 14.7015ms
+2025-03-10 00:00:36.095 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 00:00:36.131 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 00:00:36.134 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 00:00:36.135 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 401 0 null 44.2934ms
+2025-03-10 00:00:38.666 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 00:00:38.674 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 00:00:38.677 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 00:00:38.679 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 401 0 null 12.6734ms
+2025-03-10 00:00:54.431 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 00:00:54.436 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 00:00:54.439 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 00:00:54.442 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 401 0 null 10.6427ms
+2025-03-10 00:01:23.382 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 00:01:23.707 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 00:01:23.712 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 00:01:23.713 +05:00 [INF] Hosting environment: Development
+2025-03-10 00:01:23.715 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 00:01:23.838 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 00:01:24.121 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 283.6205ms
+2025-03-10 00:01:24.228 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 00:01:24.262 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 34.2292ms
+2025-03-10 00:01:24.604 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 00:01:24.615 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 00:01:24.878 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 00:01:24.928 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 00:01:25.089 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 00:01:25.141 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 00:01:25.529 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 439.8222ms
+2025-03-10 00:01:28.237 +05:00 [INF] Executed DbCommand (87ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:01:28.417 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:01:28.612 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 00:01:28.668 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 00:01:28.689 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 00:01:28.715 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 00:01:29.396 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4460.1484ms
+2025-03-10 00:01:29.404 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 00:01:29.643 +05:00 [ERR] No sign-in authentication handlers are registered. Did you forget to call AddAuthentication().AddCookie("Identity.Application",...)?
+System.InvalidOperationException: No sign-in authentication handlers are registered. Did you forget to call AddAuthentication().AddCookie("Identity.Application",...)?
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.SignInWithClaimsAsync(TUser user, AuthenticationProperties authenticationProperties, IEnumerable`1 additionalClaims)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.SignInOrTwoFactorAsync(TUser user, Boolean isPersistent, String loginProvider, Boolean bypassTwoFactor)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.PasswordSignInAsync(TUser user, String password, Boolean isPersistent, Boolean lockoutOnFailure)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.PasswordSignInAsync(String userName, String password, Boolean isPersistent, Boolean lockoutOnFailure)
+   at DynamiqCore.Application.Users.Commands.Login.LoginCommandHandler.Handle(LoginCommand request, CancellationToken cancellationToken) in D:\Personal\Repos\DynamiqCore\DynamiqCore.Application\Users\Commands\Login\LoginCommandHandler.cs:line 55
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 00:01:29.730 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 500 null null 5125.9162ms
+2025-03-10 00:01:34.580 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 00:01:34.592 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 00:01:34.595 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 00:01:34.602 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 00:01:34.649 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:01:34.657 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:01:34.775 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 00:01:34.784 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 00:01:34.791 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 00:01:34.799 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 00:01:34.989 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 391.2473ms
+2025-03-10 00:01:34.993 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 00:01:35.166 +05:00 [ERR] No sign-in authentication handlers are registered. Did you forget to call AddAuthentication().AddCookie("Identity.Application",...)?
+System.InvalidOperationException: No sign-in authentication handlers are registered. Did you forget to call AddAuthentication().AddCookie("Identity.Application",...)?
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.SignInAsync(HttpContext context, String scheme, ClaimsPrincipal principal, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.SignInWithClaimsAsync(TUser user, AuthenticationProperties authenticationProperties, IEnumerable`1 additionalClaims)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.SignInOrTwoFactorAsync(TUser user, Boolean isPersistent, String loginProvider, Boolean bypassTwoFactor)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.PasswordSignInAsync(TUser user, String password, Boolean isPersistent, Boolean lockoutOnFailure)
+   at Microsoft.AspNetCore.Identity.SignInManager`1.PasswordSignInAsync(String userName, String password, Boolean isPersistent, Boolean lockoutOnFailure)
+   at DynamiqCore.Application.Users.Commands.Login.LoginCommandHandler.Handle(LoginCommand request, CancellationToken cancellationToken) in D:\Personal\Repos\DynamiqCore\DynamiqCore.Application\Users\Commands\Login\LoginCommandHandler.cs:line 55
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 00:01:35.222 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 500 null null 642.7409ms
+2025-03-10 00:05:32.919 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 00:05:33.239 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 00:05:33.244 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 00:05:33.246 +05:00 [INF] Hosting environment: Development
+2025-03-10 00:05:33.248 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 00:05:33.466 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 00:05:33.664 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 198.9876ms
+2025-03-10 00:05:34.031 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 00:05:34.045 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 14.2172ms
+2025-03-10 00:05:34.577 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 00:05:35.150 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 573.2795ms
+2025-03-10 00:05:36.900 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 00:05:36.910 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 00:05:36.972 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 00:05:37.007 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 00:05:37.147 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 00:05:39.762 +05:00 [INF] Executed DbCommand (92ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:05:39.959 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:05:40.173 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 00:05:40.218 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 00:05:40.240 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 00:05:40.269 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 00:05:40.287 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 00:05:40.298 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 00:05:40.423 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3264.073ms.
+2025-03-10 00:05:40.441 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 00:05:40.468 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3449.7035ms
+2025-03-10 00:05:40.475 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 00:05:40.494 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 200 null application/json; charset=utf-8 3594.418ms
+2025-03-10 00:05:53.605 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 00:05:53.625 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 00:05:53.633 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 00:05:53.660 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 00:06:05.215 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:06:05.234 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11570.4339ms.
+2025-03-10 00:06:05.240 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 00:06:05.250 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 11610.7522ms
+2025-03-10 00:06:05.253 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 00:06:05.257 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 11652.3614ms
+2025-03-10 00:20:07.677 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 00:20:08.220 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 00:20:08.310 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 00:20:08.312 +05:00 [INF] Hosting environment: Development
+2025-03-10 00:20:08.314 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 00:20:08.397 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 00:20:08.568 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 00:20:08.595 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 00:20:08.640 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 245.4571ms
+2025-03-10 00:20:08.746 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 00:20:08.782 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 33.4145ms
+2025-03-10 00:20:09.081 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 00:20:09.133 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 00:20:09.361 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 00:49:37.686 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 00:49:38.110 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 00:49:38.145 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 00:49:38.147 +05:00 [INF] Hosting environment: Development
+2025-03-10 00:49:38.149 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 00:49:38.238 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 00:49:38.464 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 226.9498ms
+2025-03-10 00:49:38.539 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 00:49:38.558 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 18.9245ms
+2025-03-10 00:49:39.116 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 00:49:39.517 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 401.1307ms
+2025-03-10 00:49:47.022 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 00:49:47.032 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 00:49:49.842 +05:00 [INF] Executed DbCommand (111ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-03-10 00:49:50.094 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 00:49:50.147 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 00:49:50.179 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 00:49:50.207 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 00:49:50.234 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 00:49:50.263 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 00:49:50.409 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 00:49:54.523 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 00:49:54.551 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4126.9283ms.
+2025-03-10 00:49:54.621 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 00:49:54.655 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 4383.9063ms
+2025-03-10 00:49:54.658 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 00:49:54.673 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 7651.1916ms
+2025-03-10 01:07:10.010 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:07:10.355 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:07:10.360 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:07:10.363 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:07:10.365 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:07:10.529 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:07:10.768 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 241.3916ms
+2025-03-10 01:07:10.825 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:07:10.835 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 9.9049ms
+2025-03-10 01:07:12.303 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:07:12.624 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 321.2962ms
+2025-03-10 01:07:17.118 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:07:17.133 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:07:17.478 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:07:17.512 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:07:17.678 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:07:20.495 +05:00 [INF] Executed DbCommand (85ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:07:20.730 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3043.1628ms.
+2025-03-10 01:07:20.748 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 01:07:20.777 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 3252.982ms
+2025-03-10 01:07:20.782 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:07:20.808 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 3690.0126ms
+2025-03-10 01:07:50.465 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:07:50.493 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:07:50.499 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:07:50.528 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:07:50.582 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:07:50.591 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:07:50.774 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 01:07:50.823 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 01:07:50.847 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 01:07:50.874 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 01:07:50.890 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 01:07:50.901 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 01:09:28.446 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:09:28.736 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:09:28.740 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:09:28.742 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:09:28.744 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:09:28.853 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:09:29.095 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 243.8376ms
+2025-03-10 01:09:29.672 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:09:29.689 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 16.2518ms
+2025-03-10 01:09:30.569 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:09:30.924 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 355.1834ms
+2025-03-10 01:09:45.018 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:09:45.033 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:09:45.372 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:09:45.399 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:09:45.551 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:09:48.156 +05:00 [INF] Executed DbCommand (84ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:09:48.411 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:09:48.684 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 01:09:48.737 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 01:09:48.755 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 01:09:48.785 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 01:09:48.811 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 01:09:48.827 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 01:11:03.803 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:11:04.153 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:11:04.158 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:11:04.159 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:11:04.161 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:11:04.447 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:11:04.673 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 228.4913ms
+2025-03-10 01:11:04.927 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:11:04.954 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 28.0278ms
+2025-03-10 01:11:05.387 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:11:05.751 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 364.5904ms
+2025-03-10 01:11:10.744 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:11:10.756 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:11:11.051 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:11:11.083 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:11:11.224 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:11:13.634 +05:00 [INF] Executed DbCommand (85ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:11:13.820 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:11:14.029 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 01:11:14.077 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 01:11:14.098 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 01:11:14.122 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 01:11:14.144 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 01:11:14.153 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 01:11:14.280 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3046.5468ms.
+2025-03-10 01:11:14.298 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 01:11:14.331 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3236.7858ms
+2025-03-10 01:11:14.335 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:11:14.351 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 200 null application/json; charset=utf-8 3607.7738ms
+2025-03-10 01:11:44.929 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:11:44.958 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:11:44.966 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:11:44.990 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:11:45.230 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:11:45.250 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 255.7352ms.
+2025-03-10 01:11:45.256 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 01:11:45.264 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 291.9284ms
+2025-03-10 01:11:45.268 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:11:45.271 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 342.0446ms
+2025-03-10 01:22:53.786 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:22:54.172 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:22:54.220 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:22:54.225 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:22:54.226 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:22:54.353 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:22:54.869 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 518.0125ms
+2025-03-10 01:22:54.996 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:22:55.121 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 125.4561ms
+2025-03-10 01:22:55.626 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:22:56.165 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 538.5616ms
+2025-03-10 01:23:03.837 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:23:03.851 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:23:04.125 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:23:04.162 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:23:04.353 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:23:07.377 +05:00 [INF] Executed DbCommand (119ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 01:23:07.607 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3245.3868ms.
+2025-03-10 01:23:07.626 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 01:23:07.661 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 3489.6778ms
+2025-03-10 01:23:07.665 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:23:07.697 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 3855.9827ms
+2025-03-10 01:32:19.844 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:32:20.150 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:32:20.156 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:32:20.158 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:32:20.160 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:32:20.286 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:32:20.535 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 252.0103ms
+2025-03-10 01:32:20.584 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:32:20.597 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 12.903ms
+2025-03-10 01:32:21.124 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:32:21.543 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 418.2951ms
+2025-03-10 01:32:30.300 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:32:30.318 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:32:30.475 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 01:32:30.483 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 01:32:30.486 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 401 0 null 185.3083ms
+2025-03-10 01:32:36.894 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:32:36.906 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:32:36.950 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:32:37.063 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:32:37.671 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 709.4323ms
+2025-03-10 01:32:37.676 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:32:37.734 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 01:32:37.820 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 500 null null 926.1876ms
+2025-03-10 01:33:41.149 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:33:41.167 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:33:41.171 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:33:41.177 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:34:41.580 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 60405.3649ms
+2025-03-10 01:34:41.584 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:34:41.642 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 01:34:41.656 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 500 null null 60507.0758ms
+2025-03-10 01:34:44.979 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:34:44.994 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:34:44.995 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:34:45.001 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:35:36.542 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:35:36.967 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:35:36.972 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:35:36.975 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:35:36.976 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:35:37.257 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:35:37.497 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 240.4979ms
+2025-03-10 01:35:37.861 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:35:37.871 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 10.4939ms
+2025-03-10 01:35:38.305 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:35:38.725 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 420.0069ms
+2025-03-10 01:35:43.254 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:35:43.271 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:35:43.564 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:35:43.604 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:35:43.706 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:35:54.324 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 10708.2589ms
+2025-03-10 01:35:54.330 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:35:54.387 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 01:35:54.412 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 500 null null 11157.98ms
+2025-03-10 01:36:00.546 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:36:00.574 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:36:00.581 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:36:00.598 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:36:00.686 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 100.9425ms
+2025-03-10 01:36:00.691 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:36:00.734 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Signup(SignupCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 01:36:00.754 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 500 null null 208.619ms
+2025-03-10 01:36:06.728 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:36:06.746 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:36:06.750 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:36:06.756 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:36:06.848 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 93.7138ms
+2025-03-10 01:36:06.851 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:36:06.889 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Signup(SignupCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 01:36:06.904 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 500 null null 175.5134ms
+2025-03-10 01:36:08.835 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:36:08.842 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:36:08.845 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:36:08.850 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:36:08.932 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 82.4024ms
+2025-03-10 01:36:08.937 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 01:36:08.977 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Signup(SignupCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 01:36:08.994 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 500 null null 158.8222ms
+2025-03-10 01:45:37.868 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:45:38.176 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:45:38.181 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:45:38.184 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:45:38.185 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:45:42.988 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 01:45:43.062 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:45:43.292 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 01:45:43.303 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 01:45:43.326 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 401 0 null 339.5052ms
+2025-03-10 01:46:02.548 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 01:46:02.573 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:46:02.615 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:46:02.742 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:57:10.110 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:57:10.344 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:57:10.349 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:57:10.351 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:57:10.353 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:57:13.424 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:57:13.606 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 184.5077ms
+2025-03-10 01:57:13.692 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:57:13.709 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 16.8004ms
+2025-03-10 01:57:14.142 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:57:14.433 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 290.8807ms
+2025-03-10 01:57:23.842 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 198
+2025-03-10 01:57:23.873 +05:00 [INF] CORS policy execution successful.
+2025-03-10 01:57:23.879 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 01:57:24.015 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-10 01:57:24.024 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 01:57:24.027 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - 401 0 null 186.0315ms
+2025-03-10 01:57:41.743 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - application/json 198
+2025-03-10 01:57:41.769 +05:00 [INF] CORS policy execution successful.
+2025-03-10 01:57:41.778 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:57:41.811 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 01:57:41.900 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 01:57:56.477 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 14652.242ms
+2025-03-10 01:57:56.483 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 01:57:56.540 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 01:57:56.557 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - 500 null null 14814.445ms
+2025-03-10 01:59:51.272 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 01:59:51.597 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 01:59:51.620 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 01:59:51.622 +05:00 [INF] Hosting environment: Development
+2025-03-10 01:59:51.624 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 01:59:51.831 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 01:59:52.065 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 235.5026ms
+2025-03-10 01:59:52.312 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 01:59:52.333 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 21.4717ms
+2025-03-10 01:59:52.777 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 01:59:53.172 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 394.7415ms
+2025-03-10 02:00:05.636 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 02:00:05.650 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 02:00:05.794 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:00:05.829 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:00:05.927 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:00:17.552 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 11711.6622ms
+2025-03-10 02:00:17.558 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:00:17.605 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 02:00:17.627 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 500 null null 11990.3009ms
+2025-03-10 02:00:41.099 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 02:00:41.432 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 02:00:41.449 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 02:00:41.452 +05:00 [INF] Hosting environment: Development
+2025-03-10 02:00:41.453 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 02:00:41.642 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 02:00:41.936 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 297.549ms
+2025-03-10 02:00:42.174 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 02:00:42.200 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 26.4274ms
+2025-03-10 02:00:42.680 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 02:00:43.146 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 465.9812ms
+2025-03-10 02:00:47.663 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 02:00:47.680 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 02:00:47.813 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:00:47.845 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:00:47.941 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:00:57.262 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 9408.3515ms
+2025-03-10 02:00:57.266 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:00:57.321 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Login.LoginCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Dtos.Login.LoginDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Login(LoginCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 02:00:57.336 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 500 null null 9672.6606ms
+2025-03-10 02:01:03.291 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 02:01:03.303 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:01:03.309 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:01:03.328 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:01:03.423 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 110.3698ms
+2025-03-10 02:01:03.428 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:01:03.468 +05:00 [ERR] No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+System.InvalidOperationException: No service for type 'MediatR.IRequestHandler`2[DynamiqCore.Application.Users.Commands.Signup.SignupCommand,DynamiqCore.Shared.Results.Result`1[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto]]' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.Signup(SignupCommand command) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-10 02:01:03.485 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 500 null null 193.5995ms
+2025-03-10 02:01:11.021 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 02:01:11.027 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:01:11.029 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:01:11.034 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:09:17.994 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 02:09:18.409 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 02:09:18.415 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 02:09:18.417 +05:00 [INF] Hosting environment: Development
+2025-03-10 02:09:18.418 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 02:09:18.504 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 02:09:18.780 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 276.735ms
+2025-03-10 02:09:18.898 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 02:09:18.907 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 8.2317ms
+2025-03-10 02:09:19.638 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 02:09:19.997 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 358.9341ms
+2025-03-10 02:09:24.313 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 02:09:24.326 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 02:09:24.501 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:09:24.538 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:09:24.633 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:45:32.690 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 02:45:33.073 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 02:45:33.077 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 02:45:33.079 +05:00 [INF] Hosting environment: Development
+2025-03-10 02:45:33.081 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 02:45:33.221 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 02:45:33.436 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 217.4137ms
+2025-03-10 02:45:33.630 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 02:45:33.647 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 17.5361ms
+2025-03-10 02:45:34.437 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 02:45:34.790 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 352.8775ms
+2025-03-10 02:46:12.803 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 02:46:12.815 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 02:46:16.722 +05:00 [INF] Executed DbCommand (222ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-03-10 02:46:16.994 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 02:46:17.049 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 02:46:17.072 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 02:46:17.099 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 02:46:17.121 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:46:17.160 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:46:17.317 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:46:27.196 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 02:46:27.215 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 02:46:27.367 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 02:46:27.378 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 02:46:27.388 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 02:46:27.399 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 02:46:27.423 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 02:46:27.433 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 02:46:27.604 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10280.7727ms.
+2025-03-10 02:46:27.624 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 02:46:27.652 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 10482.7159ms
+2025-03-10 02:46:27.657 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:46:27.682 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 200 null application/json; charset=utf-8 14879.1276ms
+2025-03-10 02:46:31.520 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 02:46:31.538 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:46:31.544 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:46:31.570 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:46:36.099 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 02:46:36.116 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4543.713ms.
+2025-03-10 02:46:36.122 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 02:46:36.130 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 4581.3544ms
+2025-03-10 02:46:36.135 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:46:36.139 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 4618.979ms
+2025-03-10 02:46:57.150 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 02:46:57.452 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 02:46:57.457 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 02:46:57.459 +05:00 [INF] Hosting environment: Development
+2025-03-10 02:46:57.461 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 02:46:57.634 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 02:46:57.878 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 244.8179ms
+2025-03-10 02:46:58.056 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 02:46:58.071 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 14.3816ms
+2025-03-10 02:46:58.530 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 02:46:58.950 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 419.7022ms
+2025-03-10 02:47:06.608 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 02:47:06.623 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 02:47:06.893 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:47:06.931 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:47:07.076 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:47:16.019 +05:00 [INF] Executed DbCommand (99ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 02:47:16.205 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9121.1089ms.
+2025-03-10 02:47:16.221 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 02:47:16.247 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 9304.6718ms
+2025-03-10 02:47:16.254 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:47:16.272 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 9664.1875ms
+2025-03-10 02:50:46.831 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-10 02:50:47.155 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-10 02:50:47.161 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 02:50:47.164 +05:00 [INF] Hosting environment: Development
+2025-03-10 02:50:47.165 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-10 02:50:47.297 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-10 02:50:47.559 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 264.3308ms
+2025-03-10 02:50:47.637 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-10 02:50:47.660 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 23.5121ms
+2025-03-10 02:50:48.208 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-10 02:50:48.650 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 442.1188ms
+2025-03-10 02:50:51.880 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 204
+2025-03-10 02:50:51.895 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 02:50:52.196 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:50:52.235 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:50:52.376 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:50:58.088 +05:00 [INF] Executed DbCommand (93ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 02:50:58.281 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 02:50:58.494 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-10 02:50:58.540 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 02:50:58.557 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-10 02:50:58.582 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-10 02:50:58.601 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 02:50:58.609 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-10 02:50:58.729 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6343.0132ms.
+2025-03-10 02:50:58.744 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 02:50:58.766 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 6521.2487ms
+2025-03-10 02:50:58.771 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-10 02:50:58.793 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 200 null application/json; charset=utf-8 6913.3151ms
+2025-03-10 02:51:02.628 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - application/json 179
+2025-03-10 02:51:02.647 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:51:02.657 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-10 02:51:02.680 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-10 02:51:02.922 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-10 02:51:02.938 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 253.9205ms.
+2025-03-10 02:51:02.942 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 02:51:02.948 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 285.9438ms
+2025-03-10 02:51:02.952 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-10 02:51:02.955 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/signup - 400 null application/json; charset=utf-8 327.078ms

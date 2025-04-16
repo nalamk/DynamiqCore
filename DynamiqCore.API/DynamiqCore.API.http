@@ -1,0 +1,16 @@
+@DynamiqCore.API_HostAddress = http://localhost:5137
+
+GET {{DynamiqCore.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+POST {{DynamiqCore.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+{
+"email":"testuser@test.com",
+"password":"@1Password"
+}
+
+###
+GET {{DynamiqCore.API_HostAddress}}/organization/
+Content-Type: application/json

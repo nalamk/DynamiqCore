@@ -1,0 +1,867 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Personal\\Repos\\DynamiqCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\persistence\\dynamiqcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\persistence\\dynamiqcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|solutionrelative:dynamiqcore.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\repositories\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\repositories\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|solutionrelative:dynamiqcore.api\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.api\\controllers\\organizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|solutionrelative:dynamiqcore.api\\controllers\\organizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|solutionrelative:dynamiqcore.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.api\\extensions\\webapplicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|solutionrelative:dynamiqcore.api\\extensions\\webapplicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\dynamiqcore.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\dynamiqcore.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|solutionrelative:dynamiqcore.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\signup\\signupcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\signup\\signupcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.domain\\repositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|solutionrelative:dynamiqcore.domain\\repositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\signup\\signupcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\signup\\signupcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\login\\logincommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\login\\logincommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\login\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\dtos\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\dtos\\login\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\login\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\login\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4478F6CE-DFBA-4CA6-A82C-0F15BADDE01A}|DynamiqCore.Shared\\DynamiqCore.Shared.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.shared\\results\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4478F6CE-DFBA-4CA6-A82C-0F15BADDE01A}|DynamiqCore.Shared\\DynamiqCore.Shared.csproj|solutionrelative:dynamiqcore.shared\\results\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\repositories\\signinrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\repositories\\signinrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23CFD148-ABE4-4FD8-8208-00B5BF9ED14F}|DynamiqCore.API\\DynamiqCore.API.csproj|solutionrelative:dynamiqcore.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|solutionrelative:dynamiqcore.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\jwt\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\jwt\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\seeders\\seeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\seeders\\seeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\aec\\azurecommunicationsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\aec\\azurecommunicationsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\iusercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\iusercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\seeders\\iseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\seeders\\iseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.domain\\dynamiqcore.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|solutionrelative:dynamiqcore.domain\\dynamiqcore.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8869A5E8-E474-4960-8835-9DCE0185AF6A}|DynamiqCore.Application.Tests\\DynamiqCore.Application.Tests.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application.tests\\dynamiqcore.application.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8869A5E8-E474-4960-8835-9DCE0185AF6A}|DynamiqCore.Application.Tests\\DynamiqCore.Application.Tests.csproj|solutionrelative:dynamiqcore.application.tests\\dynamiqcore.application.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\unassignuserrole\\unassignuserrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\unassignuserrole\\unassignuserrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\activateaccount\\activateaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\activateaccount\\activateaccountcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\activateaccount\\activateaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\activateaccount\\activateaccountcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\activateaccount\\activateaccountcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\activateaccount\\activateaccountcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\resetpassword\\resetpasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\resetpassword\\resetpasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\assignrole\\assignrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\assignrole\\assignrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\activateaccount\\dtos\\activateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\activateaccount\\dtos\\activateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.infrastructure\\repositories\\organizationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF7421AA-01C4-40D4-A3E3-DF4236A50749}|DynamiqCore.Infrastructure\\DynamiqCore.Infrastructure.csproj|solutionrelative:dynamiqcore.infrastructure\\repositories\\organizationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.domain\\entities\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|solutionrelative:dynamiqcore.domain\\entities\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.domain\\repositories\\iorganizationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CF960B-33DA-4AE4-A2DB-2614744B6445}|DynamiqCore.Domain\\DynamiqCore.Domain.csproj|solutionrelative:dynamiqcore.domain\\repositories\\iorganizationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\smtp\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\smtp\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\assignuserrole\\assignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\assignuserrole\\assignuserrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\updateuserdetails\\updateuserdetailscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\updateuserdetails\\updateuserdetailscommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\assignuserrole\\assignuserrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\assignuserrole\\assignuserrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\forgotpassword\\forgotpasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\forgotpassword\\forgotpasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\forgotpassword\\forgotpasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\forgotpassword\\forgotpasswordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|d:\\personal\\repos\\dynamiqcore\\dynamiqcore.application\\users\\commands\\assignrole\\assignrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540BB5D9-F803-424E-928F-69DD8940FC89}|DynamiqCore.Application\\DynamiqCore.Application.csproj|solutionrelative:dynamiqcore.application\\users\\commands\\assignrole\\assignrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 88,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DynamiqCoreDbContext.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Persistence\\DynamiqCoreDbContext.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Persistence\\DynamiqCoreDbContext.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Persistence\\DynamiqCoreDbContext.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Persistence\\DynamiqCoreDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T14:59:02.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.API\\Controllers\\PatientController.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "DynamiqCore.API\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T11:59:43.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RolesRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\RolesRepository.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Repositories\\RolesRepository.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\RolesRepository.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Repositories\\RolesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T15:03:18.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAnwBcAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T12:05:49.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrganizationController.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\OrganizationController.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.API\\Controllers\\OrganizationController.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\OrganizationController.cs",
+              "RelativeToolTip": "DynamiqCore.API\\Controllers\\OrganizationController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T06:17:41.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.API\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DynamiqCore.API\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T23:53:16.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T16:27:45.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WebApplicationBuilderExtensions.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "RelativeToolTip": "DynamiqCore.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T01:35:26.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\appsettings.json",
+              "RelativeDocumentMoniker": "DynamiqCore.API\\appsettings.json",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\appsettings.json",
+              "RelativeToolTip": "DynamiqCore.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-28T15:46:59.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DynamiqCore.Application.csproj",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\DynamiqCore.Application.csproj",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\DynamiqCore.Application.csproj",
+              "RelativeToolTip": "DynamiqCore.Application\\DynamiqCore.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-09T18:40:13.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Program.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.API\\Program.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Program.cs",
+              "RelativeToolTip": "DynamiqCore.API\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:55:49.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SignupCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommandHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAewBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T11:47:50.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IRolesRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Repositories\\IRolesRepository.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Domain\\Repositories\\IRolesRepository.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Repositories\\IRolesRepository.cs",
+              "RelativeToolTip": "DynamiqCore.Domain\\Repositories\\IRolesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T18:33:12.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SignupCommand.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommand.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommand.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommand.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\Signup\\SignupCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T02:27:10.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginCommandValidator.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandValidator.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandValidator.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandValidator.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T11:20:24.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommandHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAH4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:08:18.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Dtos\\Login\\LoginDto.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Dtos\\Login\\LoginDto.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Dtos\\Login\\LoginDto.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Dtos\\Login\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:12:55.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginCommand.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommand.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommand.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommand.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\Login\\LoginCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T18:22:26.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Repositories\\UsersRepository.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\UsersRepository.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Repositories\\UsersRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T18:00:47.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SignInRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\SignInRepository.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Repositories\\SignInRepository.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\SignInRepository.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Repositories\\SignInRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T18:01:37.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IdentityController.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\IdentityController.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.API\\Controllers\\IdentityController.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.API\\Controllers\\IdentityController.cs",
+              "RelativeToolTip": "DynamiqCore.API\\Controllers\\IdentityController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T13:27:53.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Result.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\Results\\Result.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Shared\\Results\\Result.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Shared\\Results\\Result.cs",
+              "RelativeToolTip": "DynamiqCore.Shared\\Results\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T12:22:46.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IJwtTokenGenerator.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\JWT\\IJwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\JWT\\IJwtTokenGenerator.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\JWT\\IJwtTokenGenerator.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\JWT\\IJwtTokenGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T17:03:50.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Seeder.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Seeders\\Seeder.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Seeders\\Seeder.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Seeders\\Seeder.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Seeders\\Seeder.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T15:40:29.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AzureCommunicationSettings.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\AEC\\AzureCommunicationSettings.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\AEC\\AzureCommunicationSettings.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\AEC\\AzureCommunicationSettings.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\AEC\\AzureCommunicationSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T16:14:20.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserContext.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\UserContext.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\UserContext.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\UserContext.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\UserContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T16:31:57.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IUserContext.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\IUserContext.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\IUserContext.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\IUserContext.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\IUserContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T16:04:36.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Domain\\Entities\\ApplicationUser.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "DynamiqCore.Domain\\Entities\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T03:48:09.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CurrentUser.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\CurrentUser.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\CurrentUser.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\CurrentUser.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\CurrentUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T16:04:08.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ISeeder.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Seeders\\ISeeder.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Seeders\\ISeeder.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Seeders\\ISeeder.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Seeders\\ISeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T15:41:01.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DynamiqCore.Domain.csproj",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+              "RelativeDocumentMoniker": "DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+              "RelativeToolTip": "DynamiqCore.Domain\\DynamiqCore.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-09T14:57:47.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DynamiqCore.Application.Tests.csproj",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application.Tests\\DynamiqCore.Application.Tests.csproj",
+              "RelativeDocumentMoniker": "DynamiqCore.Application.Tests\\DynamiqCore.Application.Tests.csproj",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application.Tests\\DynamiqCore.Application.Tests.csproj",
+              "RelativeToolTip": "DynamiqCore.Application.Tests\\DynamiqCore.Application.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-09T14:57:47.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UnassignUserRoleCommand.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\UnassignUserRole\\UnassignUserRoleCommand.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\UnassignUserRole\\UnassignUserRoleCommand.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\UnassignUserRole\\UnassignUserRoleCommand.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\UnassignUserRole\\UnassignUserRoleCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T16:31:52.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ActivateAccountCommand.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommand.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommand.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommand.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:58:29.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ActivateAccountCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T13:03:28.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ActivateAccountCommandValidator.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandValidator.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandValidator.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandValidator.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\ActivateAccountCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T00:33:50.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ResetPasswordCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ResetPassword\\ResetPasswordCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\ResetPassword\\ResetPasswordCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ResetPassword\\ResetPasswordCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\ResetPassword\\ResetPasswordCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:44:21.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AssignRoleCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T23:58:59.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ActivateAccountDto.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\Dtos\\ActivateAccountDto.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\Dtos\\ActivateAccountDto.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\Dtos\\ActivateAccountDto.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\ActivateAccount\\Dtos\\ActivateAccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T12:00:15.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "OrganizationsRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\OrganizationsRepository.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Infrastructure\\Repositories\\OrganizationsRepository.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Infrastructure\\Repositories\\OrganizationsRepository.cs",
+              "RelativeToolTip": "DynamiqCore.Infrastructure\\Repositories\\OrganizationsRepository.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAE0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T01:02:46.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Organization.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Entities\\Organization.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Domain\\Entities\\Organization.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Entities\\Organization.cs",
+              "RelativeToolTip": "DynamiqCore.Domain\\Entities\\Organization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T03:47:58.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IOrganizationsRepository.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Repositories\\IOrganizationsRepository.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Domain\\Repositories\\IOrganizationsRepository.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Domain\\Repositories\\IOrganizationsRepository.cs",
+              "RelativeToolTip": "DynamiqCore.Domain\\Repositories\\IOrganizationsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T02:38:35.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "SmtpSettings.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\SMTP\\SmtpSettings.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\SMTP\\SmtpSettings.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\SMTP\\SmtpSettings.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\SMTP\\SmtpSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T02:55:13.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AssignUserRoleCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommandHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCgAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T23:59:09.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UpdateUserDetailsCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\UpdateUserDetails\\UpdateUserDetailsCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T16:49:44.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "AssignUserRoleCommand.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\AssignUserRole\\AssignUserRoleCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T16:33:17.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ForgotPasswordCommand.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommand.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommand.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommand.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:58:12.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "AssignRoleCommand.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommand.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommand.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommand.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\AssignRole\\AssignRoleCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:48:24.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ForgotPasswordCommandHandler.cs",
+              "DocumentMoniker": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommandHandler.cs",
+              "RelativeDocumentMoniker": "DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommandHandler.cs",
+              "ToolTip": "D:\\Personal\\Repos\\DynamiqCore\\DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommandHandler.cs",
+              "RelativeToolTip": "DynamiqCore.Application\\Users\\Commands\\ForgotPassword\\ForgotPasswordCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T00:57:40.418Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 312,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\bin\Debug\net8.0\CareDynamiq.Application.deps.json
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\bin\Debug\net8.0\CareDynamiq.Application.dll
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\bin\Debug\net8.0\CareDynamiq.Application.pdb
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\bin\Debug\net8.0\CareDynamiq.Domain.dll
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\bin\Debug\net8.0\CareDynamiq.Domain.pdb
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDynamiq.Application.csproj.AssemblyReference.cache
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDynamiq.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDynamiq.Application.AssemblyInfoInputs.cache
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDynamiq.Application.AssemblyInfo.cs
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDynamiq.Application.csproj.CoreCompileInputs.cache
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDyna.5C3935E6.Up2Date
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDynamiq.Application.dll
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\refint\CareDynamiq.Application.dll
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\CareDynamiq.Application.pdb
+D:\Personal\Repos\CareDynamiq\CareDynamiq.Application\obj\Debug\net8.0\ref\CareDynamiq.Application.dll

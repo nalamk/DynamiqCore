@@ -1,0 +1,241 @@
+2025-03-11 06:27:31.987 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-11 06:27:32.384 +05:00 [INF] Creating key {df9d0832-a8d5-4197-b0c6-993e084a008b} with creation date 2025-03-11 01:27:32Z, activation date 2025-03-13 01:06:41Z, and expiration date 2025-06-09 01:27:32Z.
+2025-03-11 06:27:32.432 +05:00 [INF] Writing data to file 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys\key-df9d0832-a8d5-4197-b0c6-993e084a008b.xml'.
+2025-03-11 06:27:32.938 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-11 06:27:32.943 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-11 06:27:32.945 +05:00 [INF] Hosting environment: Development
+2025-03-11 06:27:32.947 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-11 06:27:33.866 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-11 06:27:34.342 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 480.0149ms
+2025-03-11 06:27:34.680 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-11 06:27:34.730 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 49.6768ms
+2025-03-11 06:27:35.277 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-11 06:27:35.583 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 306.0163ms
+2025-03-11 06:28:08.806 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - application/json 182
+2025-03-11 06:28:08.841 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:28:08.846 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-11 06:28:13.125 +05:00 [INF] Executed DbCommand (231ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-03-11 06:28:13.469 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-11 06:28:13.515 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-11 06:28:13.593 +05:00 [INF] Executed DbCommand (23ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-11 06:28:13.663 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-11 06:28:13.707 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-11 06:28:13.753 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-11 06:28:13.936 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-11 06:28:13.996 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 232.2297ms
+2025-03-11 06:28:14.000 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-03-11 06:28:14.024 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 5217.2579ms
+2025-03-11 06:29:02.201 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login - null null
+2025-03-11 06:29:02.220 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:02.227 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login - 204 null null 27.0796ms
+2025-03-11 06:29:02.237 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - application/json 73
+2025-03-11 06:29:02.243 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:02.251 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:29:02.287 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:29:02.303 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - 302 0 null 65.5457ms
+2025-03-11 06:29:02.322 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - null null
+2025-03-11 06:29:02.330 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:02.333 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - 204 null null 10.0718ms
+2025-03-11 06:29:02.339 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - application/json null
+2025-03-11 06:29:02.347 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:02.350 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - 404 0 null 11.3168ms
+2025-03-11 06:29:02.362 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:29:31.730 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login/ - null null
+2025-03-11 06:29:31.742 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:31.743 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login/ - 204 null null 17.5902ms
+2025-03-11 06:29:31.761 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Login/ - application/json 71
+2025-03-11 06:29:31.765 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:31.767 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:29:31.770 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:29:31.772 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Login/ - 302 0 null 11.2485ms
+2025-03-11 06:29:31.780 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - null null
+2025-03-11 06:29:31.786 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:31.789 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - 204 null null 8.7055ms
+2025-03-11 06:29:31.810 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - application/json null
+2025-03-11 06:29:31.819 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:29:31.822 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - 404 0 null 11.8383ms
+2025-03-11 06:29:31.835 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:30:20.282 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login/ - null null
+2025-03-11 06:30:20.293 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:30:20.295 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login/ - 204 null null 12.7008ms
+2025-03-11 06:30:20.312 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Login/ - application/json 76
+2025-03-11 06:30:20.317 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:30:20.320 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:30:20.322 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:30:20.324 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Login/ - 302 0 null 12.6438ms
+2025-03-11 06:30:20.339 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - null null
+2025-03-11 06:30:20.346 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:30:20.347 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - 204 null null 7.9844ms
+2025-03-11 06:30:20.364 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - application/json null
+2025-03-11 06:30:20.372 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:30:20.374 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - 404 0 null 9.7438ms
+2025-03-11 06:30:20.380 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:30:37.024 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - null null
+2025-03-11 06:30:37.056 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin%2F - 404 0 null 32.1891ms
+2025-03-11 06:30:37.105 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:30:41.854 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login - null null
+2025-03-11 06:30:41.883 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login - 404 0 null 28.879ms
+2025-03-11 06:30:41.891 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:33:14.028 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login - null null
+2025-03-11 06:33:14.042 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:14.045 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login - 204 null null 16.8658ms
+2025-03-11 06:33:14.060 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - application/json 71
+2025-03-11 06:33:14.065 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:14.069 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:33:14.072 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:33:14.074 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - 302 0 null 14.5881ms
+2025-03-11 06:33:14.081 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - null null
+2025-03-11 06:33:14.088 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:14.091 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - 204 null null 9.9488ms
+2025-03-11 06:33:14.100 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - application/json null
+2025-03-11 06:33:14.105 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:14.107 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - 404 0 null 7.2391ms
+2025-03-11 06:33:14.117 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:33:24.154 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login - null null
+2025-03-11 06:33:24.161 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:24.164 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/Login - 204 null null 10.3366ms
+2025-03-11 06:33:24.172 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - application/json 76
+2025-03-11 06:33:24.178 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:24.182 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:33:24.185 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:33:24.188 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Login - 302 0 null 15.6824ms
+2025-03-11 06:33:24.198 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - null null
+2025-03-11 06:33:24.204 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:24.207 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - 204 null null 9.3609ms
+2025-03-11 06:33:24.215 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - application/json null
+2025-03-11 06:33:24.223 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:33:24.226 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2FLogin - 404 0 null 11.1296ms
+2025-03-11 06:33:24.233 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:38:17.479 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - null null
+2025-03-11 06:38:17.504 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:17.506 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - 204 null null 27.5035ms
+2025-03-11 06:38:17.515 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 76
+2025-03-11 06:38:17.522 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:17.525 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:38:17.528 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:38:17.530 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 302 0 null 14.7765ms
+2025-03-11 06:38:17.556 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - null null
+2025-03-11 06:38:17.565 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:17.567 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 204 null null 10.9535ms
+2025-03-11 06:38:17.578 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - application/json null
+2025-03-11 06:38:17.582 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:17.585 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 404 0 null 7.4718ms
+2025-03-11 06:38:17.601 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:38:39.844 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - null null
+2025-03-11 06:38:39.859 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:39.861 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - 204 null null 16.4527ms
+2025-03-11 06:38:39.895 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 76
+2025-03-11 06:38:39.900 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:39.902 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:38:39.906 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:38:39.910 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 302 0 null 15.2003ms
+2025-03-11 06:38:39.925 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - null null
+2025-03-11 06:38:39.932 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:39.935 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 204 null null 9.9695ms
+2025-03-11 06:38:39.951 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - application/json null
+2025-03-11 06:38:39.955 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:39.957 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 404 0 null 5.4267ms
+2025-03-11 06:38:39.963 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:38:52.929 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - null null
+2025-03-11 06:38:52.935 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:52.938 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - 204 null null 8.1715ms
+2025-03-11 06:38:52.951 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 76
+2025-03-11 06:38:52.959 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:52.961 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:38:52.965 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:38:52.967 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 302 0 null 15.6021ms
+2025-03-11 06:38:52.976 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - null null
+2025-03-11 06:38:52.982 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:52.984 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 204 null null 8.5846ms
+2025-03-11 06:38:52.994 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - application/json null
+2025-03-11 06:38:52.999 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:38:53.001 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 404 0 null 7.2599ms
+2025-03-11 06:38:53.011 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:40:48.330 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - null null
+2025-03-11 06:40:48.354 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:40:48.357 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - 204 null null 26.9624ms
+2025-03-11 06:40:48.364 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 76
+2025-03-11 06:40:48.373 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:40:48.375 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:40:48.378 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:40:48.383 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 302 0 null 19.8353ms
+2025-03-11 06:40:48.397 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - null null
+2025-03-11 06:40:48.411 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:40:48.414 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 204 null null 17.1489ms
+2025-03-11 06:40:48.419 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - application/json null
+2025-03-11 06:40:48.424 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:40:48.426 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 404 0 null 6.8666ms
+2025-03-11 06:40:48.431 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:41:28.233 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - null null
+2025-03-11 06:41:28.250 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:41:28.252 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - 204 null null 19.8787ms
+2025-03-11 06:41:28.260 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 76
+2025-03-11 06:41:28.266 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:41:28.269 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:41:28.272 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:41:28.275 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 302 0 null 14.9223ms
+2025-03-11 06:41:28.296 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - null null
+2025-03-11 06:41:28.303 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:41:28.304 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 204 null null 8.571ms
+2025-03-11 06:41:28.312 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - application/json null
+2025-03-11 06:41:28.317 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:41:28.320 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 404 0 null 8.242ms
+2025-03-11 06:41:28.327 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:43:52.723 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - null null
+2025-03-11 06:43:52.740 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:43:52.742 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - 204 null null 18.665ms
+2025-03-11 06:43:52.771 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 76
+2025-03-11 06:43:52.776 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:43:52.779 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:43:52.782 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:43:52.785 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 302 0 null 13.9613ms
+2025-03-11 06:43:52.801 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - null null
+2025-03-11 06:43:52.810 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:43:52.813 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 204 null null 12.2021ms
+2025-03-11 06:43:52.819 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - application/json null
+2025-03-11 06:43:52.823 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:43:52.825 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 404 0 null 6.665ms
+2025-03-11 06:43:52.834 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404
+2025-03-11 06:44:31.877 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - null null
+2025-03-11 06:44:31.887 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:44:31.889 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/account/v1/login - 204 null null 12.238ms
+2025-03-11 06:44:31.914 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/login - application/json 76
+2025-03-11 06:44:31.919 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:44:31.920 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-11 06:44:31.922 +05:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2025-03-11 06:44:31.924 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/login - 302 0 null 10.4328ms
+2025-03-11 06:44:31.931 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - null null
+2025-03-11 06:44:31.936 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:44:31.938 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 204 null null 6.7538ms
+2025-03-11 06:44:31.956 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - application/json null
+2025-03-11 06:44:31.961 +05:00 [INF] CORS policy execution successful.
+2025-03-11 06:44:31.964 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Account/Login?ReturnUrl=%2Fapi%2Faccount%2Fv1%2Flogin - 404 0 null 7.2663ms
+2025-03-11 06:44:31.969 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Account/Login, Response status code: 404

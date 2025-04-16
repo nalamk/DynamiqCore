@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jvu7H6g3j/1h5ehGGYvh0iiG2BPp/6eiDMBgxeD4bFs=",
+  "Source": "DynamiqCore.API",
+  "BasePath": "_content/DynamiqCore.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

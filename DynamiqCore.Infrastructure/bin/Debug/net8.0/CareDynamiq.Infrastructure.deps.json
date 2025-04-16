@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CareDynamiq.Infrastructure/1.0.0": {
+        "dependencies": {
+          "CareDynamiq.Application": "1.0.0"
+        },
+        "runtime": {
+          "CareDynamiq.Infrastructure.dll": {}
+        }
+      },
+      "CareDynamiq.Application/1.0.0": {
+        "dependencies": {
+          "CareDynamiq.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CareDynamiq.Application.dll": {}
+        }
+      },
+      "CareDynamiq.Domain/1.0.0": {
+        "runtime": {
+          "CareDynamiq.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CareDynamiq.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CareDynamiq.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CareDynamiq.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

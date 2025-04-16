@@ -1,0 +1,871 @@
+2024-12-24 05:27:38.766 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=ba57ad93-4213-4776-b3dd-c3adb5f57592&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - null null
+2024-12-24 05:27:38.849 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:27:38.881 +05:00 [INF] Route matched with {action = "ActivateAccount", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ActivateAccount(System.String, System.String) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 05:27:39.026 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 05:27:58.498 +05:00 [INF] Activate account: {"UserId":"ba57ad93-4213-4776-b3dd-c3adb5f57592","Token":"CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb/Wu231l+4yzOHu3fEjlNsL/A/c4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN+E5dLTVs8TPEWNj3dSDGm+/vwgIFLa2MEu1kneZyiOj+fs/rKNQLQMZYMF25SgySpN5px82L7R/sdZyu/Q+9gKGPx+l5uMxpxi1TcX6u/gSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO+dX6+H1n1GZGw==","$type":"ActivateAccountCommand"}
+2024-12-24 05:28:00.581 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-24 05:28:06.712 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 05:28:06.871 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[@p17='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p18='?' (Size = 4000), @p2='?' (DbType = Date), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (DbType = Guid), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [DateOfBirth] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [LockoutEnabled] = @p5, [LockoutEnd] = @p6, [Nationality] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [OrganizationId] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+2024-12-24 05:28:15.751 +05:00 [INF] Account activated successfully: naveed6
+2024-12-24 05:28:18.523 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 39488.9305ms.
+2024-12-24 05:28:18.539 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 05:28:18.555 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) in 39662.293ms
+2024-12-24 05:28:18.559 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:28:18.565 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=ba57ad93-4213-4776-b3dd-c3adb5f57592&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - 200 null application/json; charset=utf-8 39799.9375ms
+2024-12-24 05:28:19.181 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/favicon.ico - null null
+2024-12-24 05:28:19.192 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/favicon.ico - 404 0 null 11.0324ms
+2024-12-24 05:28:19.196 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/favicon.ico, Response status code: 404
+2024-12-24 05:28:28.400 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=ba57ad93-4213-4776-b3dd-c3adb5f57592&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - null null
+2024-12-24 05:28:28.448 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:28:28.452 +05:00 [INF] Route matched with {action = "ActivateAccount", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ActivateAccount(System.String, System.String) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 05:28:28.488 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 05:28:33.646 +05:00 [INF] Activate account: {"UserId":"ba57ad93-4213-4776-b3dd-c3adb5f57592","Token":"CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb/Wu231l+4yzOHu3fEjlNsL/A/c4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN+E5dLTVs8TPEWNj3dSDGm+/vwgIFLa2MEu1kneZyiOj+fs/rKNQLQMZYMF25SgySpN5px82L7R/sdZyu/Q+9gKGPx+l5uMxpxi1TcX6u/gSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO+dX6+H1n1GZGw==","$type":"ActivateAccountCommand"}
+2024-12-24 05:28:34.382 +05:00 [INF] Executed DbCommand (37ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-24 05:28:35.796 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 05:28:35.829 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p17='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p18='?' (Size = 4000), @p2='?' (DbType = Date), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (DbType = Guid), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [DateOfBirth] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [LockoutEnabled] = @p5, [LockoutEnd] = @p6, [Nationality] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [OrganizationId] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+OUTPUT 1
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+2024-12-24 05:28:44.663 +05:00 [INF] Account activated successfully: naveed6
+2024-12-24 05:28:44.665 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16174.4454ms.
+2024-12-24 05:28:44.669 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-24 05:28:44.675 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) in 16217.7302ms
+2024-12-24 05:28:44.677 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:28:44.680 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=ba57ad93-4213-4776-b3dd-c3adb5f57592&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - 200 null application/json; charset=utf-8 16280.5788ms
+2024-12-24 05:37:26.913 +05:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-24 05:37:27.180 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-24 05:37:27.375 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 05:37:27.655 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-24 05:37:27.754 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-24 05:37:27.756 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-24 05:37:27.844 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 05:37:27.846 +05:00 [INF] Hosting environment: Development
+2024-12-24 05:37:27.847 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-24 05:37:30.712 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-24 05:37:31.232 +05:00 [INF] Executed DbCommand (108ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-24 05:37:31.381 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-12-24 05:37:31.411 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-24 05:37:31.442 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 736.377ms
+2024-12-24 05:37:31.454 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-24 05:37:35.589 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - null null
+2024-12-24 05:37:35.671 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:37:35.706 +05:00 [INF] Route matched with {action = "ActivateAccount", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ActivateAccount(System.String, System.String) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 05:37:35.754 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 05:37:35.787 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) in 73.2451ms
+2024-12-24 05:37:35.790 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:37:35.793 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - 400 null application/problem+json; charset=utf-8 203.8461ms
+2024-12-24 05:37:46.768 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - null null
+2024-12-24 05:37:46.823 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:37:46.827 +05:00 [INF] Route matched with {action = "ActivateAccount", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ActivateAccount(System.String, System.String) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 05:37:46.834 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 05:37:46.838 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) in 6.9279ms
+2024-12-24 05:37:46.842 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2024-12-24 05:37:46.844 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/account/v1/ActivateAccount?userId=&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUe6rNZyf50NdWb%2FWu231l%2B4yzOHu3fEjlNsL%2FA%2Fc4aqIXeqoSDsghNIQimMHhFqitVw4WQDgQL1mxgN%2BE5dLTVs8TPEWNj3dSDGm%2B%2FvwgIFLa2MEu1kneZyiOj%2Bfs%2FrKNQLQMZYMF25SgySpN5px82L7R%2FsdZyu%2FQ%2B9gKGPx%2Bl5uMxpxi1TcX6u%2FgSh2W70zUoe6kToCC8lI9Bfq6h6kiE84GXSSb6KO%2BdX6%2BH1n1GZGw%3D%3D - 400 null application/problem+json; charset=utf-8 76.5696ms
+2024-12-24 14:19:18.066 +05:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-24 14:19:18.391 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-24 14:19:18.616 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 14:19:18.968 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-24 14:19:19.078 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-24 14:19:19.080 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-24 14:19:19.176 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 14:19:19.178 +05:00 [INF] Hosting environment: Development
+2024-12-24 14:19:19.179 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-24 14:19:23.390 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-24 14:19:24.014 +05:00 [INF] Executed DbCommand (105ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-24 14:19:24.222 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-12-24 14:19:24.260 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-24 14:19:24.297 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 916.5709ms
+2024-12-24 14:19:24.339 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-24 14:19:29.057 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger - null null
+2024-12-24 14:19:29.210 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger - 301 0 null 153.0549ms
+2024-12-24 14:19:29.213 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-24 14:19:29.460 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 247.4297ms
+2024-12-24 14:19:29.475 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - null null
+2024-12-24 14:19:29.476 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - null null
+2024-12-24 14:19:29.476 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-24 14:19:29.476 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.css - null null
+2024-12-24 14:19:29.477 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-24 14:19:29.477 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 14:19:29.489 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-24 14:19:29.508 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 31.5456ms
+2024-12-24 14:19:29.526 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-24 14:19:29.533 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.css - 200 202 text/css 54.9404ms
+2024-12-24 14:19:29.541 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 63.6742ms
+2024-12-24 14:19:29.568 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-24 14:19:29.568 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-24 14:19:29.574 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 97.3359ms
+2024-12-24 14:19:29.580 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - 200 152034 text/css 104.7132ms
+2024-12-24 14:19:29.669 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-24 14:19:29.676 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 199.4602ms
+2024-12-24 14:19:29.707 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 218.1842ms
+2024-12-24 14:19:30.046 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-24 14:19:30.095 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.6323ms
+2024-12-24 14:20:53.000 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/identity/v1/login - null null
+2024-12-24 14:20:53.017 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:20:53.024 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/identity/v1/login - 204 null null 24.2988ms
+2024-12-24 14:20:53.050 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/v1/login - application/json 77
+2024-12-24 14:20:53.056 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:20:53.061 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/v1/login - 307 0 null 11.0707ms
+2024-12-24 14:20:53.088 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/identity/v1/login - null null
+2024-12-24 14:20:53.092 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:20:53.093 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/identity/v1/login - 204 null null 6.2153ms
+2024-12-24 14:20:53.095 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/identity/v1/login - application/json 77
+2024-12-24 14:20:53.099 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:20:53.101 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/identity/v1/login - 404 0 null 5.725ms
+2024-12-24 14:20:53.105 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7217/api/identity/v1/login, Response status code: 404
+2024-12-24 14:21:44.596 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5137/api/identity/v1/login - null null
+2024-12-24 14:21:44.619 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:21:44.622 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5137/api/identity/v1/login - 204 null null 32.3189ms
+2024-12-24 14:21:44.641 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/v1/login - application/json 76
+2024-12-24 14:21:44.648 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:21:44.649 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/v1/login - 307 0 null 8.2848ms
+2024-12-24 14:21:44.652 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/identity/v1/login - null null
+2024-12-24 14:21:44.668 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:21:44.671 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/identity/v1/login - 204 null null 19.4625ms
+2024-12-24 14:21:44.675 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/identity/v1/login - application/json 76
+2024-12-24 14:21:44.679 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:21:44.682 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/identity/v1/login - 404 0 null 7.9449ms
+2024-12-24 14:21:44.688 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7217/api/identity/v1/login, Response status code: 404
+2024-12-24 14:25:13.040 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/login - null null
+2024-12-24 14:25:13.103 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:25:13.105 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/login - 204 null null 65.1454ms
+2024-12-24 14:25:13.111 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/login - application/json 77
+2024-12-24 14:25:13.118 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:25:13.120 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:25:13.152 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:25:13.193 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 14:25:13.219 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 58.9231ms
+2024-12-24 14:25:13.222 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:25:13.223 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/login - 400 null application/problem+json; charset=utf-8 112.5921ms
+2024-12-24 14:25:42.868 +05:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-24 14:25:43.107 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-24 14:25:43.286 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 14:25:43.461 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-24 14:25:43.537 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-24 14:25:43.539 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-24 14:25:43.601 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 14:25:43.603 +05:00 [INF] Hosting environment: Development
+2024-12-24 14:25:43.604 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-24 14:25:45.643 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-24 14:25:45.958 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 323.7227ms
+2024-12-24 14:25:45.968 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-24 14:26:00.259 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger - null null
+2024-12-24 14:26:00.327 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger - 301 0 null 67.8007ms
+2024-12-24 14:26:00.330 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-24 14:26:00.430 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 100.4992ms
+2024-12-24 14:26:00.443 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.css - null null
+2024-12-24 14:26:00.443 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - null null
+2024-12-24 14:26:00.443 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-24 14:26:00.443 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - null null
+2024-12-24 14:26:00.444 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-24 14:26:00.444 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 14:26:00.460 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-24 14:26:00.478 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-24 14:26:00.480 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 36.3989ms
+2024-12-24 14:26:00.489 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.css - 200 202 text/css 45.4606ms
+2024-12-24 14:26:00.511 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-24 14:26:00.511 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-24 14:26:00.512 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 68.5132ms
+2024-12-24 14:26:00.519 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 75.8196ms
+2024-12-24 14:26:00.528 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - 200 152034 text/css 85.1327ms
+2024-12-24 14:26:00.537 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-24 14:26:00.542 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 99.2476ms
+2024-12-24 14:26:00.570 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.7275ms
+2024-12-24 14:26:00.795 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-24 14:26:00.821 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.4163ms
+2024-12-24 14:29:11.056 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/login - null null
+2024-12-24 14:29:11.066 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:29:11.070 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/login - 204 null null 14.6524ms
+2024-12-24 14:29:11.074 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/login - application/json 77
+2024-12-24 14:29:11.086 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:29:11.090 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:29:11.118 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:29:11.193 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 14:29:11.263 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 135.4016ms
+2024-12-24 14:29:11.266 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:29:11.267 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/login - 400 null application/problem+json; charset=utf-8 193.1046ms
+2024-12-24 14:29:32.263 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/login - null null
+2024-12-24 14:29:32.269 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:29:32.270 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/login - 204 null null 6.9564ms
+2024-12-24 14:29:32.273 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/login - application/json 76
+2024-12-24 14:29:32.280 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:29:32.286 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:29:32.289 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:29:32.321 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 14:29:32.325 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 30.4244ms
+2024-12-24 14:29:32.327 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:29:32.328 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/login - 400 null application/problem+json; charset=utf-8 56.0512ms
+2024-12-24 14:30:21.560 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:30:21.565 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:30:21.567 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 7.2009ms
+2024-12-24 14:30:21.570 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 77
+2024-12-24 14:30:21.576 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:30:21.581 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:30:21.583 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:30:21.587 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 14:30:21.589 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3.4604ms
+2024-12-24 14:30:21.603 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:30:21.605 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 34.8875ms
+2024-12-24 14:30:45.845 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 79
+2024-12-24 14:30:45.849 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:30:45.856 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:30:45.859 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:30:45.956 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 14:30:57.485 +05:00 [INF] Executed DbCommand (65ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 14:30:57.520 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-24 14:30:57.534 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11566.7735ms.
+2024-12-24 14:30:57.540 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 14:30:57.546 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 11682.6765ms
+2024-12-24 14:30:57.550 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:30:57.565 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 11720.5247ms
+2024-12-24 14:31:57.370 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:31:57.388 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:31:57.389 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 20.0595ms
+2024-12-24 14:31:57.392 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 77
+2024-12-24 14:31:57.397 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:31:57.398 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:31:57.400 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:31:57.405 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 14:31:57.409 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 5.2818ms
+2024-12-24 14:31:57.413 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:31:57.415 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 23.0948ms
+2024-12-24 14:34:56.776 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:34:56.790 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:34:56.791 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 16.2915ms
+2024-12-24 14:34:56.795 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 89
+2024-12-24 14:34:56.801 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:34:56.803 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:34:56.804 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:34:56.843 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 14:35:06.619 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 14:35:11.656 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14808.6075ms.
+2024-12-24 14:35:11.661 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 14:35:11.669 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 14863.0278ms
+2024-12-24 14:35:11.672 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:35:11.674 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 14880.059ms
+2024-12-24 14:36:43.135 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:36:43.149 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:36:43.150 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 15.9391ms
+2024-12-24 14:36:43.155 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 14:36:43.172 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:36:43.175 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:36:43.178 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:36:43.214 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 14:37:10.766 +05:00 [INF] Executed DbCommand (29ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 14:38:06.158 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 82940.0895ms.
+2024-12-24 14:38:06.189 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:38:06.197 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 14:38:06.201 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:38:06.203 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 14.4503ms
+2024-12-24 14:38:06.205 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 83022.2623ms
+2024-12-24 14:38:06.207 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 14:38:06.212 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:38:06.215 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:38:06.216 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 499 null application/json; charset=utf-8 83061.9965ms
+2024-12-24 14:38:06.217 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:38:06.220 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:38:06.245 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 14:38:10.663 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 14:38:10.671 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4423.228ms.
+2024-12-24 14:38:10.678 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 14:38:10.680 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4455.6291ms
+2024-12-24 14:38:10.683 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:38:10.691 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 4484.8111ms
+2024-12-24 14:38:17.498 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:38:17.505 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:38:17.507 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 9.6388ms
+2024-12-24 14:38:17.510 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 89
+2024-12-24 14:38:17.519 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:38:17.521 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:38:17.523 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:38:17.565 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 14:38:20.066 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 14:38:20.073 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2502.701ms.
+2024-12-24 14:38:20.076 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 14:38:20.082 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 2557.2933ms
+2024-12-24 14:38:20.085 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:38:20.088 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 2578.9533ms
+2024-12-24 14:46:22.054 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:46:22.069 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:46:22.071 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 17.706ms
+2024-12-24 14:46:22.085 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 87
+2024-12-24 14:46:22.092 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:46:22.093 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:46:22.094 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:46:22.099 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 14:46:22.120 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 22.5782ms
+2024-12-24 14:46:22.123 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:46:22.127 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 44.4628ms
+2024-12-24 14:46:33.349 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 14:46:33.355 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:46:33.356 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 6.5451ms
+2024-12-24 14:46:33.358 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 89
+2024-12-24 14:46:33.363 +05:00 [INF] CORS policy execution successful.
+2024-12-24 14:46:33.364 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:46:33.367 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 14:46:33.396 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 14:46:37.150 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 14:46:37.155 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3755.5478ms.
+2024-12-24 14:46:37.157 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 14:46:37.158 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3785.1807ms
+2024-12-24 14:46:37.162 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 14:46:37.167 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 3809.5433ms
+2024-12-24 15:24:47.503 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 15:24:47.522 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:24:47.523 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 20.015ms
+2024-12-24 15:24:47.526 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 87
+2024-12-24 15:24:47.535 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:24:47.537 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:24:47.539 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 15:24:47.548 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 15:24:47.552 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 5.8452ms
+2024-12-24 15:24:47.554 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:24:47.556 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 30.2938ms
+2024-12-24 15:25:16.395 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 15:25:16.400 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:25:16.409 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 14.2009ms
+2024-12-24 15:25:16.419 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 87
+2024-12-24 15:25:16.427 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:25:16.429 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:25:16.430 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 15:25:16.435 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 15:25:16.437 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3.4902ms
+2024-12-24 15:25:16.440 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:25:16.451 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 32.2459ms
+2024-12-24 15:25:27.884 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 15:25:27.889 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:25:27.890 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 6.2125ms
+2024-12-24 15:25:27.892 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 15:25:27.899 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:25:27.900 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:25:27.902 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 15:25:27.961 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 15:25:32.226 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 15:25:32.232 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4268.8416ms.
+2024-12-24 15:25:32.234 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 15:25:32.235 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4323.9008ms
+2024-12-24 15:25:32.238 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:25:32.240 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 4348.2912ms
+2024-12-24 15:28:49.197 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 15:28:49.245 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:28:49.247 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 50.1089ms
+2024-12-24 15:28:49.250 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 89
+2024-12-24 15:28:49.255 +05:00 [INF] CORS policy execution successful.
+2024-12-24 15:28:49.256 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:28:49.258 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 15:28:49.282 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 15:28:52.166 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 15:28:52.171 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2885.2171ms.
+2024-12-24 15:28:52.178 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 15:28:52.181 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 2917.7271ms
+2024-12-24 15:28:52.183 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 15:28:52.185 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 2935.0733ms
+2024-12-24 16:04:58.662 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:04:58.681 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:04:58.682 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 20.8879ms
+2024-12-24 16:04:58.686 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 89
+2024-12-24 16:04:58.692 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:04:58.694 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:04:58.697 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:04:58.735 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:05:02.014 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:05:02.023 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3284.2253ms.
+2024-12-24 16:05:02.028 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:05:02.032 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3333.1124ms
+2024-12-24 16:05:02.035 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:05:02.037 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 3352.05ms
+2024-12-24 16:07:10.201 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:07:10.217 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:07:10.219 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 17.9531ms
+2024-12-24 16:07:10.221 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 89
+2024-12-24 16:07:10.230 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:07:10.232 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:07:10.234 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:07:10.267 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:07:13.161 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:07:13.166 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2895.5084ms.
+2024-12-24 16:07:13.170 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:07:13.172 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 2936.046ms
+2024-12-24 16:07:13.176 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:07:13.178 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 2956.6187ms
+2024-12-24 16:09:54.093 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:09:54.111 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:09:54.114 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 21.8585ms
+2024-12-24 16:09:54.117 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:09:54.128 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:09:54.140 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:09:54.143 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:09:54.150 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:09:54.153 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4.0878ms
+2024-12-24 16:09:54.155 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:09:54.156 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 39.0343ms
+2024-12-24 16:10:27.824 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:10:27.838 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:10:27.839 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 15.4681ms
+2024-12-24 16:10:27.841 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 16:10:27.849 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:10:27.850 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:10:27.851 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:10:27.889 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:10:31.737 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:10:31.742 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3850.1409ms.
+2024-12-24 16:10:31.745 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:10:31.748 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3895.3935ms
+2024-12-24 16:10:31.752 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:10:31.755 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 3914.415ms
+2024-12-24 16:11:23.728 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:11:23.747 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:11:23.749 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 20.7995ms
+2024-12-24 16:11:23.752 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 85
+2024-12-24 16:11:23.759 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:11:23.760 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:11:23.761 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:11:23.766 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:11:23.769 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4.3489ms
+2024-12-24 16:11:23.771 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:11:23.772 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 20.5363ms
+2024-12-24 16:11:41.214 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:11:41.218 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:11:41.219 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 4.6896ms
+2024-12-24 16:11:41.221 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 16:11:41.226 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:11:41.227 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:11:41.229 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:11:41.288 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:11:43.471 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:11:43.479 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2188.6688ms.
+2024-12-24 16:11:43.481 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:11:43.482 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 2246.8594ms
+2024-12-24 16:11:43.485 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:11:43.487 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 2266.5581ms
+2024-12-24 16:12:57.006 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:12:57.012 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:12:57.013 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 7.876ms
+2024-12-24 16:12:57.017 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 16:12:57.027 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:12:57.028 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:12:57.030 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:12:57.060 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:12:57.070 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:12:57.077 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.4028ms.
+2024-12-24 16:12:57.082 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:12:57.085 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 50.5364ms
+2024-12-24 16:12:57.099 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:12:57.102 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 85.4556ms
+2024-12-24 16:13:12.480 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:13:12.483 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:13:12.484 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 4.7558ms
+2024-12-24 16:13:12.486 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:13:12.490 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:13:12.492 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:13:12.495 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:13:12.499 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:13:12.501 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 2.6838ms
+2024-12-24 16:13:12.503 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:13:12.504 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 18.4375ms
+2024-12-24 16:13:27.870 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:13:27.874 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:13:27.875 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 5.1628ms
+2024-12-24 16:13:27.877 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 16:13:27.881 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:13:27.886 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:13:27.888 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:13:27.909 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:13:27.919 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:13:27.925 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.6681ms.
+2024-12-24 16:13:27.930 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:13:27.931 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 39.9029ms
+2024-12-24 16:13:27.933 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:13:27.935 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 58.4972ms
+2024-12-24 16:14:22.680 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:14:22.685 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:14:22.687 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 6.6517ms
+2024-12-24 16:14:22.690 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 16:14:22.695 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:14:22.697 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:14:22.698 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:14:22.740 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:14:22.756 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:14:22.764 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.5178ms.
+2024-12-24 16:14:22.768 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:14:22.773 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 72.0973ms
+2024-12-24 16:14:22.776 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:14:22.779 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 89.0241ms
+2024-12-24 16:14:26.117 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:14:26.121 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:14:26.122 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:14:26.123 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:14:26.128 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:14:26.130 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3.4061ms
+2024-12-24 16:14:26.132 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:14:26.133 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 16.7451ms
+2024-12-24 16:14:45.237 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:14:45.240 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:14:45.241 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 4.7149ms
+2024-12-24 16:14:45.243 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 86
+2024-12-24 16:14:45.249 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:14:45.251 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:14:45.252 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:14:45.274 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:14:45.282 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:14:45.288 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.9331ms.
+2024-12-24 16:14:45.291 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:14:45.293 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 38.664ms
+2024-12-24 16:14:45.297 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:14:45.299 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 56.5238ms
+2024-12-24 16:18:34.558 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:18:34.574 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:18:34.575 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 17.5528ms
+2024-12-24 16:18:34.578 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:18:34.585 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:18:34.586 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:18:34.587 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:18:34.592 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:18:34.595 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4.5993ms
+2024-12-24 16:18:34.598 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:18:34.600 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 23.0621ms
+2024-12-24 16:19:16.806 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:19:16.825 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:19:16.827 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 21.0585ms
+2024-12-24 16:19:16.831 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:19:16.835 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:19:16.837 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:19:16.838 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:19:16.843 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:19:16.846 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4.2136ms
+2024-12-24 16:19:16.848 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:19:16.849 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 19.367ms
+2024-12-24 16:27:01.931 +05:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-24 16:27:02.173 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-24 16:27:02.402 +05:00 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256), @p4='?' (Size = 450), @p5='?' (Size = 4000), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 450), @p9='?' (Size = 4000), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 450), @p13='?' (Size = 4000), @p14='?' (Size = 256), @p15='?' (Size = 256), @p16='?' (Size = 450), @p17='?' (Size = 4000), @p18='?' (Size = 256), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19);
+2024-12-24 16:27:02.604 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-24 16:27:02.781 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-24 16:27:02.854 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-24 16:27:02.858 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-24 16:27:02.916 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 16:27:02.919 +05:00 [INF] Hosting environment: Development
+2024-12-24 16:27:02.921 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-24 16:27:05.189 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-24 16:27:05.566 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2024-12-24 16:27:05.599 +05:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2024-12-24 16:27:05.605 +05:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-12-24 16:27:05.606 +05:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2024-12-24 16:27:05.608 +05:00 [INF] AuthenticationScheme: Identity.TwoFactorRememberMe signed out.
+2024-12-24 16:27:05.615 +05:00 [INF] Identity.Application was not authenticated. Failure message: No principal.
+2024-12-24 16:27:05.635 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 453.8411ms
+2024-12-24 16:27:05.647 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-24 16:27:11.706 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger - null null
+2024-12-24 16:27:11.778 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger - 301 0 null 71.9197ms
+2024-12-24 16:27:11.782 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-24 16:27:11.896 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 113.8201ms
+2024-12-24 16:27:11.913 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-24 16:27:11.914 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.css - null null
+2024-12-24 16:27:11.913 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-24 16:27:11.914 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - null null
+2024-12-24 16:27:11.913 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - null null
+2024-12-24 16:27:11.914 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-24 16:27:11.930 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-24 16:27:11.947 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 32.9955ms
+2024-12-24 16:27:11.952 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-24 16:27:11.960 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.css - 200 202 text/css 46.9948ms
+2024-12-24 16:27:11.968 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 54.4387ms
+2024-12-24 16:27:11.974 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-24 16:27:11.974 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-24 16:27:11.999 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 86.0877ms
+2024-12-24 16:27:12.001 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - 200 152034 text/css 88.3457ms
+2024-12-24 16:27:12.017 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-24 16:27:12.019 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 105.2142ms
+2024-12-24 16:27:12.049 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 119.3626ms
+2024-12-24 16:27:12.278 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-24 16:27:12.310 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 32.9152ms
+2024-12-24 16:27:24.494 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 79
+2024-12-24 16:27:24.507 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:27:24.513 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:27:24.541 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:27:24.711 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:27:24.818 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:27:24.840 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-24 16:27:24.852 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 135.5029ms.
+2024-12-24 16:27:24.867 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:27:24.878 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 327.9934ms
+2024-12-24 16:27:24.883 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:27:24.885 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 390.5814ms
+2024-12-24 16:27:55.235 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:27:55.255 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:27:55.258 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:27:55.261 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:27:55.299 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:27:55.310 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:27:55.376 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:27:55.565 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-12-24 16:27:55.605 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-24 16:27:55.620 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-12-24 16:27:55.629 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-24 16:28:00.464 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5162.3455ms.
+2024-12-24 16:28:00.467 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:28:00.471 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 5205.9357ms
+2024-12-24 16:28:00.473 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:28:00.474 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 200 null application/json; charset=utf-8 5239.8616ms
+2024-12-24 16:29:45.803 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:29:45.808 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:29:45.814 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 10.7222ms
+2024-12-24 16:29:45.816 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:29:45.823 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:29:45.825 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:29:45.826 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:29:45.836 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:29:45.853 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 24.8556ms
+2024-12-24 16:29:45.855 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:29:45.857 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 40.7124ms
+2024-12-24 16:30:08.205 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 74
+2024-12-24 16:30:08.211 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:30:08.214 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:30:08.216 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:30:08.241 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:30:08.245 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 25.57ms
+2024-12-24 16:30:08.247 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:30:08.249 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 44.1712ms
+2024-12-24 16:31:05.445 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:31:05.463 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:31:05.465 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 20.2561ms
+2024-12-24 16:31:05.468 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:31:05.473 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:31:05.474 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:31:05.476 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:31:05.480 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:31:05.482 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4.2247ms
+2024-12-24 16:31:05.484 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:31:05.485 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 17.0753ms
+2024-12-24 16:32:37.606 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:32:37.622 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:32:37.622 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 16.538ms
+2024-12-24 16:32:37.625 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:32:37.632 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:32:37.634 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:32:37.637 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:32:37.641 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:32:37.644 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4.9884ms
+2024-12-24 16:32:37.647 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:32:37.651 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 26.6718ms
+2024-12-24 16:34:40.976 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:34:40.994 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:34:40.996 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 19.596ms
+2024-12-24 16:34:40.999 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:34:41.004 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:34:41.006 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:34:41.008 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:34:41.013 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:34:41.015 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3.5474ms
+2024-12-24 16:34:41.017 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:34:41.018 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 19.7101ms
+2024-12-24 16:35:01.673 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:35:01.677 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:35:01.680 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 7.0169ms
+2024-12-24 16:35:01.683 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 89
+2024-12-24 16:35:01.692 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:35:01.694 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:35:01.699 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:35:01.704 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:35:01.708 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 4.7993ms
+2024-12-24 16:35:01.710 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:35:01.712 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 29.663ms
+2024-12-24 16:36:27.430 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - null null
+2024-12-24 16:36:27.446 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:36:27.448 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7217/api/account/v1/Login - 204 null null 19.1084ms
+2024-12-24 16:36:27.452 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2024-12-24 16:36:27.460 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:36:27.461 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:36:27.463 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:36:27.466 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-24 16:36:27.469 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 3.5446ms
+2024-12-24 16:36:27.472 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:36:27.475 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 400 null application/problem+json; charset=utf-8 23.4719ms
+2024-12-24 16:38:23.346 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 99
+2024-12-24 16:38:23.363 +05:00 [INF] CORS policy execution successful.
+2024-12-24 16:38:23.380 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:38:23.382 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-24 16:38:23.430 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-24 16:38:25.163 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:38:25.207 +05:00 [INF] Executed DbCommand (38ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-24 16:38:25.220 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-24 16:38:25.332 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-12-24 16:38:25.338 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-24 16:38:25.344 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-12-24 16:38:25.347 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-24 16:38:26.143 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2708.6788ms.
+2024-12-24 16:38:26.150 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-24 16:38:26.158 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 2768.2609ms
+2024-12-24 16:38:26.160 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-24 16:38:26.161 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 200 null application/json; charset=utf-8 2815.1532ms

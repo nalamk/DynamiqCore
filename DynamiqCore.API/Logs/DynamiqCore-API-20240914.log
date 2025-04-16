@@ -1,0 +1,983 @@
+2024-09-14 18:37:27.214 +05:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 18:37:27.279 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 18:37:27.284 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 18:37:27.364 +05:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-09-14 18:37:27.370 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 18:37:27.374 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 18:37:27.382 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-14 18:37:27.408 +05:00 [INF] Applying migration '20240914133412_InitialMigration'.
+2024-09-14 18:37:27.519 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2024-09-14 18:37:27.527 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [LookupConfigurations] (
+    [LookupConfigurationId] int NOT NULL IDENTITY,
+    [Key] nvarchar(500) NOT NULL,
+    [Value] nvarchar(500) NOT NULL,
+    [Description] nvarchar(1000) NOT NULL,
+    CONSTRAINT [PK_LookupConfigurations] PRIMARY KEY ([LookupConfigurationId])
+);
+2024-09-14 18:37:27.539 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Organizations] (
+    [OrganizationID] uniqueidentifier NOT NULL,
+    [Name] nvarchar(500) NOT NULL,
+    [Description] nvarchar(500) NOT NULL,
+    [ParentOrganizationId] uniqueidentifier NULL,
+    [Address_Country] nvarchar(100) NOT NULL,
+    [Address_City] nvarchar(100) NULL,
+    [Address_Street] nvarchar(200) NULL,
+    [Address_State] nvarchar(2) NULL,
+    [Address_PostalCode] nvarchar(10) NULL,
+    [Address_UnitNumber] nvarchar(50) NULL,
+    [RowVersion] rowversion NOT NULL,
+    [CreateAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdateAt] datetime2 NULL,
+    [CreatedBy] nvarchar(500) NOT NULL,
+    [UpdatedBy] nvarchar(500) NULL,
+    CONSTRAINT [PK_Organizations] PRIMARY KEY ([OrganizationID]),
+    CONSTRAINT [FK_Organizations_Organizations_ParentOrganizationId] FOREIGN KEY ([ParentOrganizationId]) REFERENCES [Organizations] ([OrganizationID]) ON DELETE NO ACTION
+);
+2024-09-14 18:37:27.550 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2024-09-14 18:37:27.559 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [OrganizationId] uniqueidentifier NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUsers_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([OrganizationID]) ON DELETE SET NULL
+);
+2024-09-14 18:37:27.569 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Patients] (
+    [Id] uniqueidentifier NOT NULL,
+    [FirstName] nvarchar(250) NOT NULL,
+    [MiddleName] nvarchar(250) NOT NULL,
+    [LastName] nvarchar(250) NOT NULL,
+    [DateOfBirth] date NOT NULL,
+    [Gender] nvarchar(10) NOT NULL,
+    [MaritalStatus] nvarchar(20) NOT NULL,
+    [BloodType] nvarchar(5) NOT NULL,
+    [Nationality] nvarchar(100) NOT NULL,
+    [PreferredLanguage] nvarchar(50) NOT NULL,
+    [Address_Country] nvarchar(100) NOT NULL,
+    [Address_City] nvarchar(100) NULL,
+    [Address_Street] nvarchar(200) NULL,
+    [Address_State] nvarchar(200) NULL,
+    [Address_PostalCode] nvarchar(20) NULL,
+    [RowVersion] rowversion NOT NULL,
+    [CreateAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdateAt] datetime2 NULL,
+    [CreatedBy] nvarchar(500) NOT NULL,
+    [UpdatedBy] nvarchar(500) NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Patients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Patients_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([OrganizationID]) ON DELETE NO ACTION
+);
+2024-09-14 18:37:27.580 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-09-14 18:37:27.592 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-09-14 18:37:27.600 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-09-14 18:37:27.607 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2024-09-14 18:37:27.616 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2024-09-14 18:37:27.622 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2024-09-14 18:37:27.627 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2024-09-14 18:37:27.630 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2024-09-14 18:37:27.633 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2024-09-14 18:37:27.637 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2024-09-14 18:37:27.640 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUsers_OrganizationId] ON [AspNetUsers] ([OrganizationId]);
+2024-09-14 18:37:27.644 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2024-09-14 18:37:27.648 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Organizations_ParentOrganizationId] ON [Organizations] ([ParentOrganizationId]);
+2024-09-14 18:37:27.651 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Patients_OrganizationId] ON [Patients] ([OrganizationId]);
+2024-09-14 18:37:27.658 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240914133412_InitialMigration', N'8.0.0');
+2024-09-14 18:42:39.506 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 18:42:39.583 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 18:42:39.591 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 18:42:39.597 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 18:42:39.613 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-14 18:42:39.632 +05:00 [INF] Applying migration '20240914134215_UpdatedTableIds'.
+2024-09-14 18:42:39.700 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] DROP CONSTRAINT [FK_AspNetUsers_Organizations_OrganizationId];
+2024-09-14 18:42:39.706 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Patients] DROP CONSTRAINT [FK_Patients_Organizations_OrganizationId];
+2024-09-14 18:42:39.891 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Patients].[OrganizationId]', N'OrganizationID', N'COLUMN';
+2024-09-14 18:42:39.897 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Patients].[Id]', N'PatientID', N'COLUMN';
+2024-09-14 18:42:39.899 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Patients].[IX_Patients_OrganizationId]', N'IX_Patients_OrganizationID', N'INDEX';
+2024-09-14 18:42:39.903 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[LookupConfigurations].[LookupConfigurationId]', N'LookupConfigurationID', N'COLUMN';
+2024-09-14 18:42:39.907 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[AspNetUsers].[OrganizationId]', N'OrganizationID', N'COLUMN';
+2024-09-14 18:42:39.909 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[AspNetUsers].[IX_AspNetUsers_OrganizationId]', N'IX_AspNetUsers_OrganizationID', N'INDEX';
+2024-09-14 18:42:39.914 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD CONSTRAINT [FK_AspNetUsers_Organizations_OrganizationID] FOREIGN KEY ([OrganizationID]) REFERENCES [Organizations] ([OrganizationID]) ON DELETE SET NULL;
+2024-09-14 18:42:39.918 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Patients] ADD CONSTRAINT [FK_Patients_Organizations_OrganizationID] FOREIGN KEY ([OrganizationID]) REFERENCES [Organizations] ([OrganizationID]) ON DELETE NO ACTION;
+2024-09-14 18:42:39.922 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240914134215_UpdatedTableIds', N'8.0.0');
+2024-09-14 19:15:43.171 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 19:15:43.241 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 19:15:43.248 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 19:15:43.251 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 19:15:43.266 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-14 19:15:43.284 +05:00 [INF] Applying migration '20240914141531_MiddleNameAndDesceiptionIsOptional'.
+2024-09-14 19:15:43.403 +05:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Patients]') AND [c].[name] = N'MiddleName');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Patients] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Patients] ALTER COLUMN [MiddleName] nvarchar(250) NULL;
+2024-09-14 19:15:43.422 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Organizations]') AND [c].[name] = N'Description');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [Organizations] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [Organizations] ALTER COLUMN [Description] nvarchar(500) NULL;
+2024-09-14 19:15:43.428 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240914141531_MiddleNameAndDesceiptionIsOptional', N'8.0.0');
+2024-09-14 19:17:15.637 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:17:16.593 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:17:16.600 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:17:16.601 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:17:16.603 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:17:16.717 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:17:16.849 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:17:16.857 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:17:16.894 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:17:16.914 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:17:16.925 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.0036ms.
+2024-09-14 19:17:16.967 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:17:17.066 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 164.7663ms
+2024-09-14 19:17:17.098 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:17:17.144 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 428.3047ms
+2024-09-14 19:17:17.974 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/favicon.ico - null null
+2024-09-14 19:17:18.056 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/favicon.ico - 404 0 null 86.573ms
+2024-09-14 19:17:18.149 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/favicon.ico, Response status code: 404
+2024-09-14 19:17:59.678 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:17:59.811 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 133.4405ms
+2024-09-14 19:17:59.859 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui.css - null null
+2024-09-14 19:17:59.866 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.css - null null
+2024-09-14 19:17:59.867 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-bundle.js - null null
+2024-09-14 19:17:59.875 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-14 19:17:59.875 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:17:59.903 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-09-14 19:17:59.927 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.css - 200 202 text/css 60.7271ms
+2024-09-14 19:17:59.935 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 59.0815ms
+2024-09-14 19:17:59.936 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-14 19:17:59.936 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-14 19:17:59.957 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui.css - 200 152034 text/css 98.0168ms
+2024-09-14 19:17:59.958 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 83.0631ms
+2024-09-14 19:17:59.966 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-14 19:17:59.972 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 105.0833ms
+2024-09-14 19:18:00.602 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:18:00.641 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/favicon-32x32.png - null null
+2024-09-14 19:18:00.648 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-09-14 19:18:00.674 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/favicon-32x32.png - 200 628 image/png 32.7198ms
+2024-09-14 19:18:00.818 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 216.3024ms
+2024-09-14 19:20:55.371 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:20:56.001 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:20:56.005 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:20:56.006 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:20:56.007 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:20:56.166 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:20:56.292 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:20:56.303 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:20:56.335 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:20:56.351 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:20:56.360 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.4287ms.
+2024-09-14 19:20:56.395 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:20:56.490 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 147.0514ms
+2024-09-14 19:20:56.494 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:20:56.501 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 338.664ms
+2024-09-14 19:21:06.222 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:21:06.315 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 93.5501ms
+2024-09-14 19:21:06.356 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:21:06.365 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 8.7518ms
+2024-09-14 19:21:06.634 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:21:06.908 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 273.8156ms
+2024-09-14 19:27:08.579 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:27:09.054 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:27:09.057 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:27:09.058 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:27:09.059 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:27:09.477 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:27:09.589 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:27:09.596 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:27:09.622 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:27:09.639 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:27:09.649 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.0873ms.
+2024-09-14 19:27:09.681 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:27:09.739 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 107.4588ms
+2024-09-14 19:27:09.742 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:27:09.745 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 269.1763ms
+2024-09-14 19:27:14.215 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:27:14.319 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 103.9644ms
+2024-09-14 19:27:14.349 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:27:14.355 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 6.5354ms
+2024-09-14 19:27:15.440 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:27:15.689 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 249.5853ms
+2024-09-14 19:27:33.911 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:27:33.918 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:27:33.924 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 19:27:33.928 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:27:33.932 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.3425ms.
+2024-09-14 19:27:33.938 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:27:33.943 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 15.1193ms
+2024-09-14 19:27:33.946 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:27:33.948 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 200 null application/json; charset=utf-8 36.3361ms
+2024-09-14 19:27:53.629 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:27:53.652 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:27:53.657 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 19:27:53.662 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:27:53.665 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0362ms.
+2024-09-14 19:27:53.668 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:27:53.670 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 8.7529ms
+2024-09-14 19:27:53.673 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:27:53.676 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 200 null application/json; charset=utf-8 47.1642ms
+2024-09-14 19:30:10.769 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:30:11.247 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:30:11.250 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:30:11.251 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:30:11.253 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:30:11.505 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:30:11.505 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:30:11.655 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:30:11.664 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:30:11.701 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:30:11.717 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:30:11.729 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.0977ms.
+2024-09-14 19:30:11.766 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:30:11.794 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 292.1457ms
+2024-09-14 19:30:11.819 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:30:11.830 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 120.3504ms
+2024-09-14 19:30:11.831 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 11.9006ms
+2024-09-14 19:30:11.833 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:30:11.839 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 337.3428ms
+2024-09-14 19:30:12.956 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:30:13.243 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 286.4448ms
+2024-09-14 19:30:24.291 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:30:24.299 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:30:24.303 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 19:30:24.307 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:30:24.311 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1982ms.
+2024-09-14 19:30:24.315 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:30:24.317 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 10.9715ms
+2024-09-14 19:30:24.320 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:30:24.323 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 200 null application/json; charset=utf-8 32.2475ms
+2024-09-14 19:30:41.067 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:30:41.073 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:30:41.075 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:30:41.077 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:30:41.079 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 19:30:41.081 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:30:41.084 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0312ms.
+2024-09-14 19:30:41.087 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:30:41.088 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 7.0192ms
+2024-09-14 19:30:41.091 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:30:41.093 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 200 null application/json; charset=utf-8 26.653ms
+2024-09-14 19:31:49.411 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:31:49.869 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:31:49.874 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:31:49.876 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:31:49.878 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:31:50.296 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:31:50.397 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:31:50.402 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:31:50.431 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:31:50.452 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:31:50.464 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.5314ms.
+2024-09-14 19:31:50.493 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:31:50.554 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 112.8239ms
+2024-09-14 19:31:50.556 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:31:50.560 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 265.6529ms
+2024-09-14 19:31:55.385 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:31:55.502 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 117.2134ms
+2024-09-14 19:31:55.527 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:31:55.535 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 8.0623ms
+2024-09-14 19:31:55.970 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:31:56.281 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 311.8058ms
+2024-09-14 19:45:29.289 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:45:29.758 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:45:29.762 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:45:29.763 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:45:29.764 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:45:29.945 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:45:30.053 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:45:30.059 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:45:30.092 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:45:30.108 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:45:30.123 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.7668ms.
+2024-09-14 19:45:30.155 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:45:30.223 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 119.8362ms
+2024-09-14 19:45:30.225 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:45:30.228 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 284.8677ms
+2024-09-14 19:45:33.023 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:45:33.119 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 95.7026ms
+2024-09-14 19:45:33.150 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:45:33.158 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 7.6348ms
+2024-09-14 19:45:33.786 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:45:34.078 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 292.0465ms
+2024-09-14 19:45:58.554 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/login?useCookies=true&useSessionCookies=true - application/json 113
+2024-09-14 19:45:58.572 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:46:01.459 +05:00 [INF] Executed DbCommand (146ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationID], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 19:46:01.529 +05:00 [INF] Setting HTTP status code 401.
+2024-09-14 19:46:01.542 +05:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2024-09-14 19:46:01.547 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:46:01.561 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/login?useCookies=true&useSessionCookies=true - 401 null application/problem+json 3007.5072ms
+2024-09-14 19:46:24.232 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:46:24.244 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:46:24.249 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 19:46:24.254 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:46:24.258 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.1185ms.
+2024-09-14 19:46:24.263 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:46:24.265 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 12.4117ms
+2024-09-14 19:46:24.273 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:46:24.275 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 200 null application/json; charset=utf-8 42.5071ms
+2024-09-14 19:46:48.917 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:46:48.924 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 7.3834ms
+2024-09-14 19:46:48.954 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:46:48.958 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 4.2494ms
+2024-09-14 19:46:49.579 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:46:49.608 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.3334ms
+2024-09-14 19:46:55.556 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:46:55.562 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:46:55.565 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 19:46:55.569 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:46:55.572 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0488ms.
+2024-09-14 19:46:55.575 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:46:55.578 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 8.9135ms
+2024-09-14 19:46:55.579 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:46:55.580 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 200 null application/json; charset=utf-8 23.5432ms
+2024-09-14 19:47:12.181 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:47:12.642 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:47:12.645 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:47:12.647 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:47:12.648 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:47:13.099 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:47:13.193 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:47:13.199 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:47:13.224 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:47:13.239 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:47:13.250 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.2763ms.
+2024-09-14 19:47:13.282 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:47:13.346 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 114.9649ms
+2024-09-14 19:47:13.349 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:47:13.353 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 256.7072ms
+2024-09-14 19:47:16.897 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:47:17.030 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 132.7531ms
+2024-09-14 19:47:17.067 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:47:17.076 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 9.5099ms
+2024-09-14 19:47:17.280 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:47:17.631 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 350.7776ms
+2024-09-14 19:47:22.949 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:47:22.957 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:47:22.963 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 19:47:22.968 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:47:22.970 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.7602ms.
+2024-09-14 19:47:22.973 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:47:22.977 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 10.1752ms
+2024-09-14 19:47:22.982 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 19:47:22.984 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 200 null application/json; charset=utf-8 34.2842ms
+2024-09-14 19:48:09.078 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:48:09.565 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:48:09.568 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:48:09.569 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:48:09.570 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:48:09.815 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:48:09.913 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:48:09.918 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:48:09.945 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:48:09.962 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:48:09.972 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.4494ms.
+2024-09-14 19:48:09.999 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:48:10.063 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 109.9476ms
+2024-09-14 19:48:10.065 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:48:10.069 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 258.4066ms
+2024-09-14 19:48:15.151 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:48:15.176 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:48:15.184 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:48:15.187 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 401 0 null 35.9368ms
+2024-09-14 19:48:30.588 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:48:30.596 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:48:30.600 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:48:30.607 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:48:30.610 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:48:30.611 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 401 0 null 23.1653ms
+2024-09-14 19:48:57.303 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/login?useCookies=true&useSessionCookies=false - application/json 113
+2024-09-14 19:48:57.313 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:48:57.315 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:48:57.318 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:48:59.667 +05:00 [INF] Executed DbCommand (71ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationID], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 19:48:59.719 +05:00 [INF] Setting HTTP status code 401.
+2024-09-14 19:48:59.740 +05:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2024-09-14 19:48:59.749 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:48:59.767 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/login?useCookies=true&useSessionCookies=false - 401 null application/problem+json 2464.6947ms
+2024-09-14 19:49:54.379 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 19:49:54.389 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:49:54.391 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:49:54.394 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:49:54.395 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:49:54.397 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 401 0 null 20.8247ms
+2024-09-14 19:52:17.332 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/login?useCookies=true&useSessionCookies=false - application/json 52
+2024-09-14 19:52:17.339 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:52:17.341 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:52:17.343 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:52:17.354 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:52:17.808 +05:00 [ERR] Failed to read parameter "LoginRequest login" from the request body as JSON.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to read parameter "LoginRequest login" from the request body as JSON.
+ ---> System.Text.Json.JsonException: The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 3 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. LineNumber: 3 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.ReadConstructorArgumentsWithContinuation(ReadStack& state, Utf8JsonReader& reader, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync[TValue](HttpRequest request, JsonTypeInfo`1 jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync[TValue](HttpRequest request, JsonTypeInfo`1 jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.TryResolveBodyAsync[T](HttpContext httpContext, <GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper logOrThrowExceptionHelper, Boolean allowEmpty, String parameterTypeName, String parameterName, JsonTypeInfo`1 jsonTypeInfo, Boolean isInferred)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper.InvalidJsonRequestBody(String parameterTypeName, String parameterName, Exception exception)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.TryResolveBodyAsync[T](HttpContext httpContext, <GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper logOrThrowExceptionHelper, Boolean allowEmpty, String parameterTypeName, String parameterName, JsonTypeInfo`1 jsonTypeInfo, Boolean isInferred)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapPost1>g__RequestHandler|4>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2024-09-14 19:52:17.867 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/login?useCookies=true&useSessionCookies=false - 500 null null 535.2735ms
+2024-09-14 19:52:31.377 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/login - application/json 52
+2024-09-14 19:52:31.383 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:52:31.386 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:52:31.389 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:52:31.392 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:52:31.433 +05:00 [ERR] Failed to read parameter "LoginRequest login" from the request body as JSON.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to read parameter "LoginRequest login" from the request body as JSON.
+ ---> System.Text.Json.JsonException: The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 3 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. LineNumber: 3 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.ReadConstructorArgumentsWithContinuation(ReadStack& state, Utf8JsonReader& reader, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Converters.ObjectWithParameterizedConstructorConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize(ReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync(Stream utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync[TValue](HttpRequest request, JsonTypeInfo`1 jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync[TValue](HttpRequest request, JsonTypeInfo`1 jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.TryResolveBodyAsync[T](HttpContext httpContext, <GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper logOrThrowExceptionHelper, Boolean allowEmpty, String parameterTypeName, String parameterName, JsonTypeInfo`1 jsonTypeInfo, Boolean isInferred)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper.InvalidJsonRequestBody(String parameterTypeName, String parameterName, Exception exception)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.TryResolveBodyAsync[T](HttpContext httpContext, <GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper logOrThrowExceptionHelper, Boolean allowEmpty, String parameterTypeName, String parameterName, JsonTypeInfo`1 jsonTypeInfo, Boolean isInferred)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapPost1>g__RequestHandler|4>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2024-09-14 19:52:31.451 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/login - 500 null null 74.6519ms
+2024-09-14 19:53:09.902 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/login - application/json 51
+2024-09-14 19:53:09.914 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:53:09.915 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 19:53:09.916 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:53:09.972 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationID], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 19:53:09.978 +05:00 [INF] Setting HTTP status code 401.
+2024-09-14 19:53:09.979 +05:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2024-09-14 19:53:09.981 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:53:09.983 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/login - 401 null application/problem+json 81.1583ms
+2024-09-14 19:56:34.233 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:56:34.679 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:56:34.684 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:56:34.687 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:56:34.688 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:56:35.085 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:56:35.207 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:56:35.213 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:56:35.241 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:56:35.255 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:56:35.266 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.8301ms.
+2024-09-14 19:56:35.296 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:56:35.356 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 107.1751ms
+2024-09-14 19:56:35.359 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:56:35.364 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 283.5105ms
+2024-09-14 19:56:37.828 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/login - application/json 0
+2024-09-14 19:56:37.839 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:56:37.844 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/login'
+2024-09-14 19:56:38.287 +05:00 [ERR] Required parameter "LoginRequest login" was not provided from body.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Required parameter "LoginRequest login" was not provided from body.
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper.RequiredParameterNotProvided(String parameterTypeName, String parameterName, String source)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.TryResolveBodyAsync[T](HttpContext httpContext, <GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__LogOrThrowExceptionHelper logOrThrowExceptionHelper, Boolean allowEmpty, String parameterTypeName, String parameterName, JsonTypeInfo`1 jsonTypeInfo, Boolean isInferred)
+   at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F69328E0708B4B584C5AACA22FE2C51A1CF192D6622828F613FC57C583CA77B63__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapPost1>g__RequestHandler|4>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2024-09-14 19:56:38.350 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/login - 500 null null 521.8343ms
+2024-09-14 19:57:26.051 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/api/organization/ - null null
+2024-09-14 19:57:26.063 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/api/organization/ - 404 0 null 11.8919ms
+2024-09-14 19:57:26.078 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/api/organization/, Response status code: 404
+2024-09-14 19:57:29.372 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/api/organization/ - null null
+2024-09-14 19:57:29.380 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/api/organization/ - 404 0 null 7.7142ms
+2024-09-14 19:57:29.386 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/api/organization/, Response status code: 404
+2024-09-14 19:57:37.700 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 19:57:37.797 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 97.0691ms
+2024-09-14 19:57:37.834 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 19:57:37.840 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 5.812ms
+2024-09-14 19:57:38.499 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 19:57:38.752 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 253.4065ms
+2024-09-14 19:58:05.769 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:58:05.779 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:58:05.785 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:58:05.788 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 401 0 null 19.1678ms
+2024-09-14 19:58:21.471 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:58:21.479 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:58:21.482 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:58:21.484 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 401 0 null 12.8747ms
+2024-09-14 19:58:33.828 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:58:33.836 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:58:33.839 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:58:33.842 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 401 0 null 14.6176ms
+2024-09-14 19:58:35.091 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:58:35.097 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:58:35.099 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:58:35.101 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 401 0 null 9.3274ms
+2024-09-14 19:58:40.841 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:58:40.847 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:58:40.850 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:58:40.852 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 401 0 null 11.2549ms
+2024-09-14 19:58:42.141 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:58:42.147 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 19:58:42.149 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 19:58:42.151 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 401 0 null 10.5595ms
+2024-09-14 19:59:07.198 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 19:59:07.692 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 19:59:07.697 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 19:59:07.698 +05:00 [INF] Hosting environment: Development
+2024-09-14 19:59:07.700 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 19:59:08.093 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 19:59:08.201 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 19:59:08.209 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:59:08.241 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 19:59:08.256 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 19:59:08.266 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.1854ms.
+2024-09-14 19:59:08.294 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 19:59:08.364 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 114.4712ms
+2024-09-14 19:59:08.366 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 19:59:08.369 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 280.8197ms
+2024-09-14 19:59:18.909 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:59:18.919 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 404 0 null 10.1641ms
+2024-09-14 19:59:18.925 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/organization/, Response status code: 404
+2024-09-14 19:59:20.383 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:59:20.393 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 404 0 null 9.4965ms
+2024-09-14 19:59:20.401 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/organization/, Response status code: 404
+2024-09-14 19:59:27.854 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - null null
+2024-09-14 19:59:27.862 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 404 0 null 7.4701ms
+2024-09-14 19:59:27.871 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/organization/, Response status code: 404
+2024-09-14 19:59:44.663 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - application/json null
+2024-09-14 19:59:44.670 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 404 0 null 6.77ms
+2024-09-14 19:59:44.679 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/organization/, Response status code: 404
+2024-09-14 19:59:45.757 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/organization/ - application/json null
+2024-09-14 19:59:45.765 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/organization/ - 404 0 null 7.7994ms
+2024-09-14 19:59:45.770 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/organization/, Response status code: 404
+2024-09-14 20:00:41.545 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 20:00:42.041 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 20:00:42.045 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 20:00:42.046 +05:00 [INF] Hosting environment: Development
+2024-09-14 20:00:42.048 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 20:00:42.543 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 20:00:42.670 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 20:00:42.680 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:00:42.721 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 20:00:42.738 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 20:00:42.752 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4.1212ms.
+2024-09-14 20:00:42.789 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 20:00:42.864 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 134.335ms
+2024-09-14 20:00:42.867 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:00:42.870 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 331.4944ms
+2024-09-14 20:01:16.236 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/register - application/json 62
+2024-09-14 20:01:16.251 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/register'
+2024-09-14 20:01:18.844 +05:00 [INF] Executed DbCommand (82ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationID], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 20:01:19.147 +05:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (DbType = Guid), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [OrganizationID], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-09-14 20:01:19.180 +05:00 [INF] Setting HTTP status code 200.
+2024-09-14 20:01:19.184 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/register'
+2024-09-14 20:01:19.201 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/register - 200 0 null 2965.4939ms
+2024-09-14 20:02:30.885 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/identity/login - application/json 62
+2024-09-14 20:02:30.906 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/login'
+2024-09-14 20:02:30.956 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationID], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 20:02:31.126 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-09-14 20:02:31.145 +05:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2024-09-14 20:02:31.162 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/login'
+2024-09-14 20:02:31.165 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/identity/login - 200 null application/json; charset=utf-8 280.5037ms
+2024-09-14 20:02:57.971 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 20:02:58.013 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:02:58.015 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:02:58.018 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 404 0 null 51.7225ms
+2024-09-14 20:02:58.031 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Organization, Response status code: 404
+2024-09-14 20:03:20.999 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 20:03:21.005 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:03:21.007 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:03:21.009 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 404 0 null 10.1944ms
+2024-09-14 20:03:21.016 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/Organization, Response status code: 404
+2024-09-14 20:03:36.872 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 20:03:37.328 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 20:03:37.333 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 20:03:37.335 +05:00 [INF] Hosting environment: Development
+2024-09-14 20:03:37.336 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 20:03:37.623 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 20:03:37.749 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 20:03:37.756 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:03:37.795 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 20:03:37.810 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 20:03:37.820 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.3032ms.
+2024-09-14 20:03:37.852 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 20:03:37.909 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 104.0145ms
+2024-09-14 20:03:37.912 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:03:37.915 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 295.7576ms
+2024-09-14 20:03:54.729 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/Organization - null null
+2024-09-14 20:03:54.740 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:03:54.744 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:03:54.752 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 20:03:54.758 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 20:03:54.761 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/Organization - 401 0 null 32.4921ms
+2024-09-14 20:09:04.925 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 20:09:05.361 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 20:09:05.366 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 20:09:05.369 +05:00 [INF] Hosting environment: Development
+2024-09-14 20:09:05.372 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 20:09:05.683 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 20:09:05.784 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 20:09:05.790 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:09:05.815 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 20:09:05.836 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 20:09:05.844 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.8747ms.
+2024-09-14 20:09:05.871 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 20:09:05.937 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 109.7077ms
+2024-09-14 20:09:05.939 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:09:05.942 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 260.8591ms
+2024-09-14 20:09:13.079 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 20:09:13.170 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 91.1564ms
+2024-09-14 20:09:13.211 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 20:09:13.219 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 7.9822ms
+2024-09-14 20:09:13.897 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 20:09:14.154 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 257.2215ms
+2024-09-14 20:10:48.541 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 20:10:49.005 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 20:10:49.008 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 20:10:49.011 +05:00 [INF] Hosting environment: Development
+2024-09-14 20:10:49.012 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 20:10:49.466 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 20:10:49.562 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 20:10:49.568 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:10:49.595 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 20:10:49.612 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 20:10:49.623 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.5449ms.
+2024-09-14 20:10:49.656 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 20:10:49.724 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 120.5571ms
+2024-09-14 20:10:49.728 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:10:49.731 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 268.4468ms
+2024-09-14 20:11:05.908 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 20:11:06.005 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 96.8696ms
+2024-09-14 20:11:06.046 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 20:11:06.056 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 10.2114ms
+2024-09-14 20:11:06.428 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 20:11:06.668 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 244.5093ms
+2024-09-14 20:11:58.464 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/api/dynamiq-core/v1/organizations - null null
+2024-09-14 20:11:58.480 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:11:58.481 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:11:58.487 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 20:11:58.494 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 20:11:58.497 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/api/dynamiq-core/v1/organizations - 401 0 null 32.8578ms
+2024-09-14 20:12:31.703 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/dynamiq-core/v1/identity/login - application/json 62
+2024-09-14 20:12:31.718 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:12:31.725 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:12:31.727 +05:00 [INF] Executing endpoint 'HTTP: POST api/dynamiq-core/v1/identity/login'
+2024-09-14 20:12:34.235 +05:00 [INF] Executed DbCommand (70ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationID], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 20:12:34.543 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-09-14 20:12:34.565 +05:00 [INF] AuthenticationScheme: Identity.Bearer signed in.
+2024-09-14 20:12:34.588 +05:00 [INF] Executed endpoint 'HTTP: POST api/dynamiq-core/v1/identity/login'
+2024-09-14 20:12:34.608 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/dynamiq-core/v1/identity/login - 200 null application/json; charset=utf-8 2904.736ms
+2024-09-14 20:13:02.319 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/api/dynamiq-core/v1/organizations - null null
+2024-09-14 20:13:02.332 +05:00 [INF] Identity.Bearer was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:13:02.334 +05:00 [INF] Identity.BearerAndApplication was not authenticated. Failure message: Unprotected token failed
+2024-09-14 20:13:02.340 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-14 20:13:02.350 +05:00 [INF] AuthenticationScheme: Identity.Bearer was challenged.
+2024-09-14 20:13:02.352 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/api/dynamiq-core/v1/organizations - 401 0 null 32.8498ms
+2024-09-14 20:13:21.484 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/api/dynamiq-core/v1/organizations - null null
+2024-09-14 20:13:21.495 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 20:13:21.500 +05:00 [INF] Route matched with {action = "Get", controller = "Organization"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.OrganizationController (DynamiqCore.API).
+2024-09-14 20:13:21.507 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 20:13:29.828 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8317.9049ms.
+2024-09-14 20:13:29.834 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 20:13:29.837 +05:00 [INF] Executed action DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API) in 8331.1278ms
+2024-09-14 20:13:29.839 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.OrganizationController.Get (DynamiqCore.API)'
+2024-09-14 20:13:29.840 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/api/dynamiq-core/v1/organizations - 200 null application/json; charset=utf-8 8356.3415ms
+2024-09-14 20:16:36.319 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 20:16:36.775 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 20:16:36.780 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 20:16:36.783 +05:00 [INF] Hosting environment: Development
+2024-09-14 20:16:36.785 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 20:16:37.216 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 20:16:37.313 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 20:16:37.319 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:16:37.347 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 20:16:37.363 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 20:16:37.375 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.1818ms.
+2024-09-14 20:16:37.408 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 20:16:37.493 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 135.894ms
+2024-09-14 20:16:37.502 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 20:16:37.508 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 295.7494ms
+2024-09-14 20:16:41.598 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 20:16:41.693 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 94.8851ms
+2024-09-14 20:16:41.727 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 20:16:41.734 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 7.1972ms
+2024-09-14 20:16:42.306 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 20:16:42.592 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 285.7472ms
+2024-09-14 20:42:48.143 +05:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 20:42:48.228 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 20:42:48.235 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 20:42:48.239 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 20:42:48.258 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-14 20:42:48.280 +05:00 [INF] Applying migration '20240914154230_UpdatedApplicationUserEntity'.
+2024-09-14 20:42:48.372 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [DateOnly] date NULL;
+2024-09-14 20:42:48.378 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Nationality] nvarchar(max) NULL;
+2024-09-14 20:42:48.383 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240914154230_UpdatedApplicationUserEntity', N'8.0.0');
+2024-09-14 21:35:52.926 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 21:35:52.993 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 21:35:52.999 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-14 21:35:53.003 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-14 21:35:53.018 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-14 21:35:53.033 +05:00 [INF] Applying migration '20240914163539_ChangeDateOnlyTheDateOfBirth'.
+2024-09-14 21:35:53.363 +05:00 [INF] Executed DbCommand (246ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[AspNetUsers].[DateOnly]', N'DateOfBirth', N'COLUMN';
+2024-09-14 21:35:53.369 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240914163539_ChangeDateOnlyTheDateOfBirth', N'8.0.0');
+2024-09-14 21:36:10.499 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 21:36:10.953 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 21:36:10.974 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 21:36:10.976 +05:00 [INF] Hosting environment: Development
+2024-09-14 21:36:10.979 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 21:36:11.168 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 21:36:11.277 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 21:36:11.287 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 21:36:11.321 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 21:36:11.337 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 21:36:11.345 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.4769ms.
+2024-09-14 21:36:11.378 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 21:36:11.428 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 100.851ms
+2024-09-14 21:36:11.430 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 21:36:11.435 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 499 null application/json; charset=utf-8 269.2029ms
+2024-09-14 21:36:13.597 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 21:36:13.607 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 21:36:13.610 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 21:36:13.616 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 21:36:13.621 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.1146ms.
+2024-09-14 21:36:13.624 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 21:36:13.639 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 24.2665ms
+2024-09-14 21:36:13.643 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 21:36:13.646 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 48.5667ms
+2024-09-14 21:36:18.687 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 21:36:18.806 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 119.1752ms
+2024-09-14 21:36:18.879 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 21:36:18.885 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 5.9883ms
+2024-09-14 21:36:19.527 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 21:36:19.764 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 236.731ms
+2024-09-14 21:39:26.583 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 21:39:27.058 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-14 21:39:27.062 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 21:39:27.065 +05:00 [INF] Hosting environment: Development
+2024-09-14 21:39:27.066 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-14 21:39:27.375 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-14 21:39:27.495 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-14 21:39:27.502 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 21:39:27.530 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-14 21:39:27.547 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-14 21:39:27.561 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.2669ms.
+2024-09-14 21:39:27.603 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-14 21:39:27.681 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 140.8582ms
+2024-09-14 21:39:27.684 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-14 21:39:27.688 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 316.2759ms
+2024-09-14 21:39:32.697 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-14 21:39:32.789 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 92.0823ms
+2024-09-14 21:39:32.825 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-14 21:39:32.834 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 9.0142ms
+2024-09-14 21:39:33.460 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-14 21:39:33.690 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 230.5059ms

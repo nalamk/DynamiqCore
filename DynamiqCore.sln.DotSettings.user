@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=73690e8c_002D16a1_002D4568_002Db620_002D3658d0684786/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="IsInRole_WithMatchingRole_ShouldReturnTrue" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::8869A5E8-E474-4960-8835-9DCE0185AF6A::net8.0::DynamiqCore.Application.Tests.Users.CurrentUserTests.IsInRole_WithMatchingRole_ShouldReturnTrue&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::8869A5E8-E474-4960-8835-9DCE0185AF6A::net8.0::DynamiqCore.Application.Tests.Users.CurrentUserTests.IsInRole_WithNoMatchingRole_ShouldReturnFalse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::8869A5E8-E474-4960-8835-9DCE0185AF6A::net8.0::DynamiqCore.Application.Tests.Users.CurrentUserTests.IsInRole_WithNoMatchingRoleCase_ShouldReturnFalse&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

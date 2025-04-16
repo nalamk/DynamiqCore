@@ -1,0 +1,12 @@
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\bin\Debug\net8.0\DynamiqCore.Domain.deps.json
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\bin\Debug\net8.0\DynamiqCore.Domain.dll
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\bin\Debug\net8.0\DynamiqCore.Domain.pdb
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\DynamiqCore.Domain.csproj.AssemblyReference.cache
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\DynamiqCore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\DynamiqCore.Domain.AssemblyInfoInputs.cache
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\DynamiqCore.Domain.AssemblyInfo.cs
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\DynamiqCore.Domain.csproj.CoreCompileInputs.cache
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\DynamiqCore.Domain.dll
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\refint\DynamiqCore.Domain.dll
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\DynamiqCore.Domain.pdb
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Domain\obj\Debug\net8.0\ref\DynamiqCore.Domain.dll

@@ -1,0 +1,244 @@
+[
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.AccountController",
+    "Method": "ActivateAccount",
+    "RelativePath": "api/account/v1/ActivateAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.AccountController",
+    "Method": "AddRole",
+    "RelativePath": "api/account/v1/AddRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.AccountController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/account/v1/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.ForgotPassword.ForgotPasswordCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/account/v1/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.Login.LoginCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/account/v1/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.ResetPassword.ResetPasswordCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.AccountController",
+    "Method": "Signup",
+    "RelativePath": "api/account/v1/Signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.Signup.SignupCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.IdentityController",
+    "Method": "AssignUserRole",
+    "RelativePath": "api/identity/v1/AssignRoleToUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.AssignUserRole.AssignUserRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.IdentityController",
+    "Method": "UnassignUserRole",
+    "RelativePath": "api/identity/v1/UnAssignUserRole",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.UnassignUserRole.UnassignUserRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.IdentityController",
+    "Method": "UpdateUserDetails",
+    "RelativePath": "api/identity/v1/UpdateUserDetail",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Users.Commands.UpdateUserDetailsCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.OrganizationController",
+    "Method": "CreateOrganization",
+    "RelativePath": "api/organizations/v1",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "DynamiqCore.Application.Organizations.Commands.CreateOrganization.CreateOrganizationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.OrganizationController",
+    "Method": "GetAll",
+    "RelativePath": "api/organizations/v1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DynamiqCore.Application.Organizations.Dtos.OrganizationDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.OrganizationController",
+    "Method": "GetById",
+    "RelativePath": "api/organizations/v1/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DynamiqCore.Application.Organizations.Dtos.OrganizationDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DynamiqCore.API.Controllers.OrganizationController",
+    "Method": "DeleteOrganization",
+    "RelativePath": "api/organizations/v1/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 404
+      }
+    ]
+  }
+]

@@ -1,0 +1,537 @@
+2025-03-03 02:18:09.455 +05:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-03 02:18:09.524 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-03 02:18:09.533 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-03 02:18:09.540 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-03 02:18:09.558 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-03 02:18:09.578 +05:00 [INF] Applying migration '20250302211649_ChangesInFields'.
+2025-03-03 02:18:09.657 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Organizations] DROP CONSTRAINT [FK_Organizations_Organizations_ParentOrganizationId];
+2025-03-03 02:18:09.665 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX [IX_Organizations_ParentOrganizationId] ON [Organizations];
+2025-03-03 02:18:09.712 +05:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Organizations]') AND [c].[name] = N'ParentOrganizationId');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [Organizations] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [Organizations] DROP COLUMN [ParentOrganizationId];
+2025-03-03 02:18:09.723 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [FirstName] nvarchar(max) NULL;
+2025-03-03 02:18:09.730 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [LastName] nvarchar(max) NULL;
+2025-03-03 02:18:09.735 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250302211649_ChangesInFields', N'8.0.0');
+2025-03-03 02:18:23.492 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:18:24.036 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:18:24.040 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:18:24.042 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:18:24.044 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:18:24.228 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2025-03-03 02:18:24.333 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-03 02:18:24.378 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 404 0 null 150.1196ms
+2025-03-03 02:18:24.435 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/weatherforecast, Response status code: 404
+2025-03-03 02:18:35.240 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:18:35.375 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 135.3336ms
+2025-03-03 02:18:35.435 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui.css - null null
+2025-03-03 02:18:35.436 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.css - null null
+2025-03-03 02:18:35.437 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-bundle.js - null null
+2025-03-03 02:18:35.438 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:18:35.439 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-03 02:18:35.479 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 40.7483ms
+2025-03-03 02:18:35.480 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-03-03 02:18:35.518 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.css - 200 202 text/css 82.2564ms
+2025-03-03 02:18:35.526 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-03-03 02:18:35.526 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-03-03 02:18:35.545 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui.css - 200 152034 text/css 109.7631ms
+2025-03-03 02:18:35.545 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 106.5217ms
+2025-03-03 02:18:35.567 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-03 02:18:35.573 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 136.7178ms
+2025-03-03 02:18:36.493 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:18:36.502 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/favicon-32x32.png - null null
+2025-03-03 02:18:36.510 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-03-03 02:18:36.516 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/favicon-32x32.png - 200 628 image/png 13.7128ms
+2025-03-03 02:18:36.769 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 275.9502ms
+2025-03-03 02:19:16.585 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:19:16.918 +05:00 [ERR] Hosting failed to start
+System.InvalidOperationException: A path base can only be configured using IApplicationBuilder.UsePathBase().
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.ParseAddress(String address, Boolean& https)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-03-03 02:20:04.927 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:20:05.277 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:20:05.281 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:20:05.283 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:20:05.285 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:20:05.371 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger - null null
+2025-03-03 02:20:05.451 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger - 301 0 null 80.2954ms
+2025-03-03 02:20:05.466 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:20:05.655 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 189.3578ms
+2025-03-03 02:20:05.760 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:20:05.810 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 50.0597ms
+2025-03-03 02:20:07.129 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:20:07.409 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 280.1621ms
+2025-03-03 02:22:32.838 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:22:33.189 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:22:33.193 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:22:33.196 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:22:33.197 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:22:33.360 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:22:33.598 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 239.6653ms
+2025-03-03 02:22:33.682 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:22:33.717 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 34.9516ms
+2025-03-03 02:22:34.204 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:22:34.463 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 258.9618ms
+2025-03-03 02:24:50.419 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:24:50.757 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:24:50.762 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:24:50.764 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:24:50.766 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:24:50.936 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:24:51.141 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 207.6755ms
+2025-03-03 02:24:51.195 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:24:51.220 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 24.5323ms
+2025-03-03 02:24:51.721 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:24:52.017 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 295.8539ms
+2025-03-03 02:25:42.460 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:25:42.864 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:25:42.875 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:25:42.877 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:25:42.879 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:25:43.013 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:25:43.228 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 217.3926ms
+2025-03-03 02:25:43.284 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:25:43.294 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 9.81ms
+2025-03-03 02:25:44.334 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:25:44.666 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 331.5556ms
+2025-03-03 02:26:17.051 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 205
+2025-03-03 02:26:17.080 +05:00 [INF] CORS policy execution successful.
+2025-03-03 02:26:17.084 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-03 02:26:17.104 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:26:17.139 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:26:17.247 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:26:35.343 +05:00 [INF] Executed DbCommand (162ms) [Parameters=[@__organizationId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[OrganizationId], [o].[CreateAt], [o].[CreatedBy], [o].[Description], [o].[Name], [o].[RowVersion], [o].[UpdateAt], [o].[UpdatedBy], [o].[Address_City], [o].[Address_Country], [o].[Address_PostalCode], [o].[Address_State], [o].[Address_Street], [o].[Address_UnitNumber]
+FROM [Organizations] AS [o]
+WHERE [o].[OrganizationId] = @__organizationId_0
+2025-03-03 02:26:35.543 +05:00 [ERR] Error occurred during user signup
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DynamiqCore.Application.Users.Commands.Signup.SignupCommandHandler.Handle(SignupCommand request, CancellationToken cancellationToken) in D:\Personal\Repos\DynamiqCore\DynamiqCore.Application\Users\Commands\Signup\SignupCommandHandler.cs:line 55
+2025-03-03 02:26:45.239 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 27981.779ms.
+2025-03-03 02:26:45.254 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 02:26:45.273 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 28123.7427ms
+2025-03-03 02:26:45.277 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:26:45.291 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - 500 null application/json; charset=utf-8 28240.1531ms
+2025-03-03 02:27:02.778 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 205
+2025-03-03 02:27:02.810 +05:00 [INF] CORS policy execution successful.
+2025-03-03 02:27:02.813 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:27:02.815 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:27:02.821 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:29:26.815 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:29:27.127 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:29:27.143 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:29:27.145 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:29:27.146 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:29:27.231 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:29:27.463 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 234.4747ms
+2025-03-03 02:29:27.512 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:29:27.521 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 9.5092ms
+2025-03-03 02:29:28.044 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:29:28.347 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 303.3098ms
+2025-03-03 02:29:53.673 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 205
+2025-03-03 02:29:53.697 +05:00 [INF] CORS policy execution successful.
+2025-03-03 02:29:53.701 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-03 02:29:53.722 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:29:53.758 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:29:53.851 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:30:19.321 +05:00 [INF] Executed DbCommand (88ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-03 02:30:19.603 +05:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Date), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 4000), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [DateOfBirth], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [Nationality], [NormalizedEmail], [NormalizedUserName], [OrganizationId], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2025-03-03 02:30:30.319 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-03 02:30:36.282 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-03 02:30:36.392 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2025-03-03 02:30:48.502 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-03-03 02:30:48.655 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-03-03 02:30:48.668 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-03-03 02:30:48.696 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-03 02:30:48.772 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p21='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p22='?' (Size = 4000), @p4='?' (DbType = Date), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (DbType = Guid), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [DateOfBirth] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Nationality] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [OrganizationId] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [SecurityStamp] = @p18, [TwoFactorEnabled] = @p19, [UserName] = @p20
+OUTPUT 1
+WHERE [Id] = @p21 AND [ConcurrencyStamp] = @p22;
+2025-03-03 02:31:59.223 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 125360.9942ms.
+2025-03-03 02:31:59.238 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 02:31:59.261 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 125494.6825ms
+2025-03-03 02:31:59.266 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:31:59.280 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - 200 null application/json; charset=utf-8 125607.0168ms
+2025-03-03 02:34:15.724 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:34:16.100 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:34:16.106 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:34:16.108 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:34:16.109 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:34:16.307 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:34:16.541 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 239.8799ms
+2025-03-03 02:34:16.612 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:34:16.637 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 21.3194ms
+2025-03-03 02:34:17.192 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:34:17.461 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 269.3137ms
+2025-03-03 02:34:42.304 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 207
+2025-03-03 02:34:42.330 +05:00 [INF] CORS policy execution successful.
+2025-03-03 02:34:42.334 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-03 02:34:42.353 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:34:42.385 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:34:42.487 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:34:48.897 +05:00 [INF] Executed DbCommand (69ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-03 02:34:49.174 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Date), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 4000), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [DateOfBirth], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [Nationality], [NormalizedEmail], [NormalizedUserName], [OrganizationId], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2025-03-03 02:34:49.204 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-03 02:34:49.235 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-03-03 02:34:49.283 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-03-03 02:34:49.297 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-03-03 02:34:49.317 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-03 02:34:49.380 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p21='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p22='?' (Size = 4000), @p4='?' (DbType = Date), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (DbType = Guid), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [DateOfBirth] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Nationality] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [OrganizationId] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [SecurityStamp] = @p18, [TwoFactorEnabled] = @p19, [UserName] = @p20
+OUTPUT 1
+WHERE [Id] = @p21 AND [ConcurrencyStamp] = @p22;
+2025-03-03 02:34:57.287 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14792.5148ms.
+2025-03-03 02:34:57.301 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 02:34:57.326 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 14933.3439ms
+2025-03-03 02:34:57.331 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:34:57.353 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - 200 null application/json; charset=utf-8 15048.4774ms
+2025-03-03 02:36:30.241 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/api/account/v1/ActivateAccount?userId=a061d33a-d3c7-4507-a34a-7d289bb46d3e&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUehFAlRBTFaVWrbw8UBZM9HuNyNOPCC%2BF6iXxwaSvbcKF5mcukcmNwlfq6c6rVwphIGpdRuyP0FkseuxZALwk%2FNzuGil0J07cHXhLDfmWe%2BPd7zdVXZNdVPNUeu1aWkPMPy9X2qOldVOR3%2BZaXvDgRVn5nXKLJrlZdY3qYzH%2F5t7ECVfMCRJOumxWmBCtgVdtunNdoXT7qCy5iQ7eFTIZIFD4xB%2Bawd8EdzWO2GhRjtxg%3D%3D - null null
+2025-03-03 02:36:30.251 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2025-03-03 02:36:30.262 +05:00 [INF] Route matched with {action = "ActivateAccount", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ActivateAccount(System.String, System.String) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:36:30.277 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:36:46.855 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) in 16588.9874ms
+2025-03-03 02:36:46.862 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2025-03-03 02:36:46.908 +05:00 [ERR] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DynamiqCore.API.Controllers.AccountController.ActivateAccount(String userId, String token) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Controllers\AccountController.cs:line 76
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\Personal\Repos\DynamiqCore\DynamiqCore.API\Middlewares\ErrorHandlingMiddleware.cs:line 9
+2025-03-03 02:36:46.965 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/api/account/v1/ActivateAccount?userId=a061d33a-d3c7-4507-a34a-7d289bb46d3e&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUehFAlRBTFaVWrbw8UBZM9HuNyNOPCC%2BF6iXxwaSvbcKF5mcukcmNwlfq6c6rVwphIGpdRuyP0FkseuxZALwk%2FNzuGil0J07cHXhLDfmWe%2BPd7zdVXZNdVPNUeu1aWkPMPy9X2qOldVOR3%2BZaXvDgRVn5nXKLJrlZdY3qYzH%2F5t7ECVfMCRJOumxWmBCtgVdtunNdoXT7qCy5iQ7eFTIZIFD4xB%2Bawd8EdzWO2GhRjtxg%3D%3D - 500 null null 16723.7729ms
+2025-03-03 02:36:47.891 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/favicon.ico - null null
+2025-03-03 02:36:47.900 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/favicon.ico - 404 0 null 9.121ms
+2025-03-03 02:36:47.908 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/favicon.ico, Response status code: 404
+2025-03-03 02:36:57.079 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/ActivateAccount?userId=a061d33a-d3c7-4507-a34a-7d289bb46d3e&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUehFAlRBTFaVWrbw8UBZM9HuNyNOPCC%2BF6iXxwaSvbcKF5mcukcmNwlfq6c6rVwphIGpdRuyP0FkseuxZALwk%2FNzuGil0J07cHXhLDfmWe%2BPd7zdVXZNdVPNUeu1aWkPMPy9X2qOldVOR3%2BZaXvDgRVn5nXKLJrlZdY3qYzH%2F5t7ECVfMCRJOumxWmBCtgVdtunNdoXT7qCy5iQ7eFTIZIFD4xB%2Bawd8EdzWO2GhRjtxg%3D%3D - null null
+2025-03-03 02:36:57.085 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/ActivateAccount?userId=a061d33a-d3c7-4507-a34a-7d289bb46d3e&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUehFAlRBTFaVWrbw8UBZM9HuNyNOPCC%2BF6iXxwaSvbcKF5mcukcmNwlfq6c6rVwphIGpdRuyP0FkseuxZALwk%2FNzuGil0J07cHXhLDfmWe%2BPd7zdVXZNdVPNUeu1aWkPMPy9X2qOldVOR3%2BZaXvDgRVn5nXKLJrlZdY3qYzH%2F5t7ECVfMCRJOumxWmBCtgVdtunNdoXT7qCy5iQ7eFTIZIFD4xB%2Bawd8EdzWO2GhRjtxg%3D%3D - 404 0 null 6.7593ms
+2025-03-03 02:36:57.094 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/ActivateAccount, Response status code: 404
+2025-03-03 02:39:34.953 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:39:35.419 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:39:35.447 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:39:35.458 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:39:35.463 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:39:35.535 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:39:35.791 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 257.1467ms
+2025-03-03 02:39:35.851 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:39:35.881 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 29.7512ms
+2025-03-03 02:39:36.633 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:39:36.937 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 303.8291ms
+2025-03-03 02:40:11.059 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 205
+2025-03-03 02:40:11.094 +05:00 [INF] CORS policy execution successful.
+2025-03-03 02:40:11.098 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-03 02:40:11.117 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:40:11.150 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:40:11.255 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:40:17.303 +05:00 [INF] Executed DbCommand (78ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-03 02:40:17.597 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Date), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 4000), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (DbType = Guid), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [DateOfBirth], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [Nationality], [NormalizedEmail], [NormalizedUserName], [OrganizationId], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2025-03-03 02:40:17.629 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-03 02:40:17.663 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-03-03 02:40:17.715 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-03-03 02:40:17.729 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-03-03 02:40:17.752 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-03 02:40:17.810 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p21='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p22='?' (Size = 4000), @p4='?' (DbType = Date), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (DbType = Guid), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [DateOfBirth] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LockoutEnabled] = @p9, [LockoutEnd] = @p10, [Nationality] = @p11, [NormalizedEmail] = @p12, [NormalizedUserName] = @p13, [OrganizationId] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [SecurityStamp] = @p18, [TwoFactorEnabled] = @p19, [UserName] = @p20
+OUTPUT 1
+WHERE [Id] = @p21 AND [ConcurrencyStamp] = @p22;
+2025-03-03 02:40:26.098 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14835.2619ms.
+2025-03-03 02:40:26.114 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Commands.Signup.Dtos.SignupDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-03 02:40:26.136 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) in 14975.8865ms
+2025-03-03 02:40:26.142 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:40:26.160 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - 200 null application/json; charset=utf-8 15100.3203ms
+2025-03-03 02:40:36.266 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/api/account/v1/ActivateAccount/?userId=22c1b603-c7a3-41ee-85bc-18a1ac275268&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUfxP2f4nvSoXBv9XcZBYhUxfBVo691HlXTQrNcU4AVzMKJSRMy42SozYdtkJzk84KAyf%2FA1dp%2F3%2FeGAJwpwMMbrw0GMKL3NzPooHlKpoW5FFp53iDtJrLcKgl037C9BmvR22eA5yGunIiks0g6%2FPTNSp%2FmxNJTbyyGRVQAcARkZnFgA8QALuvLfKWfDrHHVXxDuk6KlHUZBpbyfstI5IGhBMHfzx%2FwJsGzuvReSBMo0Qg%3D%3D - null null
+2025-03-03 02:40:36.299 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2025-03-03 02:40:36.306 +05:00 [INF] Route matched with {action = "ActivateAccount", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ActivateAccount(System.String, System.String) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:40:36.321 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:41:24.014 +05:00 [INF] Activate account: {"UserId":"22c1b603-c7a3-41ee-85bc-18a1ac275268","Token":"CfDJ8Ip9SYBxLEVHg1LajVnzQUfxP2f4nvSoXBv9XcZBYhUxfBVo691HlXTQrNcU4AVzMKJSRMy42SozYdtkJzk84KAyf/A1dp/3/eGAJwpwMMbrw0GMKL3NzPooHlKpoW5FFp53iDtJrLcKgl037C9BmvR22eA5yGunIiks0g6/PTNSp/mxNJTbyyGRVQAcARkZnFgA8QALuvLfKWfDrHHVXxDuk6KlHUZBpbyfstI5IGhBMHfzx/wJsGzuvReSBMo0Qg==","$type":"ActivateAccountCommand"}
+2025-03-03 02:41:25.855 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-03-03 02:41:36.103 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-03-03 02:41:36.180 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@p19='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p20='?' (Size = 4000), @p2='?' (DbType = Date), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 4000), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (DbType = Guid), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [DateOfBirth] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [FirstName] = @p5, [LastName] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [Nationality] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [OrganizationId] = @p12, [PasswordHash] = @p13, [PhoneNumber] = @p14, [PhoneNumberConfirmed] = @p15, [SecurityStamp] = @p16, [TwoFactorEnabled] = @p17, [UserName] = @p18
+OUTPUT 1
+WHERE [Id] = @p19 AND [ConcurrencyStamp] = @p20;
+2025-03-03 02:41:40.399 +05:00 [INF] Account activated successfully: naveed1
+2025-03-03 02:41:43.703 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 67380.6423ms.
+2025-03-03 02:41:43.716 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-03 02:41:43.722 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API) in 67412.9089ms
+2025-03-03 02:41:43.725 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.ActivateAccount (DynamiqCore.API)'
+2025-03-03 02:41:43.728 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/api/account/v1/ActivateAccount/?userId=22c1b603-c7a3-41ee-85bc-18a1ac275268&token=CfDJ8Ip9SYBxLEVHg1LajVnzQUfxP2f4nvSoXBv9XcZBYhUxfBVo691HlXTQrNcU4AVzMKJSRMy42SozYdtkJzk84KAyf%2FA1dp%2F3%2FeGAJwpwMMbrw0GMKL3NzPooHlKpoW5FFp53iDtJrLcKgl037C9BmvR22eA5yGunIiks0g6%2FPTNSp%2FmxNJTbyyGRVQAcARkZnFgA8QALuvLfKWfDrHHVXxDuk6KlHUZBpbyfstI5IGhBMHfzx%2FwJsGzuvReSBMo0Qg%3D%3D - 200 null application/json; charset=utf-8 67461.8725ms
+2025-03-03 02:43:35.449 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 201
+2025-03-03 02:43:35.457 +05:00 [INF] CORS policy execution successful.
+2025-03-03 02:43:35.461 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:43:35.463 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:43:35.468 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:44:00.632 +05:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 500), @p2='?' (Size = 500), @p3='?' (Size = 500), @p4='?' (DbType = DateTime2), @p5='?' (Size = 500)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Organizations] ([OrganizationId], [CreatedBy], [Description], [Name], [UpdateAt], [UpdatedBy])
+OUTPUT INSERTED.[CreateAt], INSERTED.[RowVersion]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-03-03 02:44:00.753 +05:00 [ERR] An exception occurred in the database while saving changes for context type 'DynamiqCore.Infrastructure.Persistence.DynamiqCoreDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'DynamiqCore_DEV.dbo.Organizations'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:28db18a0-e722-4db4-adc1-8b379610ca31
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'CreatedBy', table 'DynamiqCore_DEV.dbo.Organizations'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:28db18a0-e722-4db4-adc1-8b379610ca31
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-03-03 02:45:43.790 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:45:44.185 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:45:44.189 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:45:44.191 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:45:44.193 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:45:44.310 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:45:44.531 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 223.0292ms
+2025-03-03 02:45:44.581 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:45:44.598 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 16.8028ms
+2025-03-03 02:45:45.184 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:45:45.494 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 310.3036ms
+2025-03-03 02:45:49.645 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5137/api/account/v1/Signup - application/json 201
+2025-03-03 02:45:49.660 +05:00 [INF] CORS policy execution successful.
+2025-03-03 02:45:49.665 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-03-03 02:45:49.690 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API)'
+2025-03-03 02:45:49.724 +05:00 [INF] Route matched with {action = "Signup", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Signup(DynamiqCore.Application.Users.Commands.Signup.SignupCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-03-03 02:45:49.826 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Signup (DynamiqCore.API) - Validation state: "Valid"
+2025-03-03 02:46:04.337 +05:00 [INF] Executed DbCommand (72ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 500), @p2='?' (Size = 500), @p3='?' (Size = 500), @p4='?' (DbType = DateTime2), @p5='?' (Size = 500)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Organizations] ([OrganizationId], [CreatedBy], [Description], [Name], [UpdateAt], [UpdatedBy])
+OUTPUT INSERTED.[CreateAt], INSERTED.[RowVersion]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-03-03 02:46:04.425 +05:00 [ERR] An exception occurred in the database while saving changes for context type 'DynamiqCore.Infrastructure.Persistence.DynamiqCoreDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address_Country', table 'DynamiqCore_DEV.dbo.Organizations'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:a203bc1d-54f7-4107-bab1-4883b60a4eaa
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address_Country', table 'DynamiqCore_DEV.dbo.Organizations'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:a203bc1d-54f7-4107-bab1-4883b60a4eaa
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-03-03 02:55:02.369 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-03 02:55:02.706 +05:00 [INF] Now listening on: http://localhost:5137
+2025-03-03 02:55:02.729 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-03 02:55:02.735 +05:00 [INF] Hosting environment: Development
+2025-03-03 02:55:02.737 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-03-03 02:55:02.944 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2025-03-03 02:55:03.142 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 218.8651ms
+2025-03-03 02:55:03.339 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2025-03-03 02:55:03.349 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 9.6572ms
+2025-03-03 02:55:03.786 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2025-03-03 02:55:04.069 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 282.7744ms

@@ -1,0 +1,676 @@
+2024-12-16 17:07:12.649 +05:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 17:07:12.917 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-16 17:07:13.003 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-16 17:07:13.600 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-16 17:07:13.667 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-16 17:07:13.668 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-16 17:07:13.763 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-16 17:07:13.765 +05:00 [INF] Hosting environment: Development
+2024-12-16 17:07:13.767 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-16 17:07:21.295 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-16 17:07:21.611 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 322.4394ms
+2024-12-16 17:07:21.622 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-16 17:07:31.563 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger - null null
+2024-12-16 17:07:31.628 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger - 301 0 null 66.1231ms
+2024-12-16 17:07:31.634 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:07:31.756 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 122.2755ms
+2024-12-16 17:07:31.770 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - null null
+2024-12-16 17:07:31.770 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.css - null null
+2024-12-16 17:07:31.770 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - null null
+2024-12-16 17:07:31.770 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-16 17:07:31.771 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:07:31.771 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:07:31.799 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:07:31.815 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 44.0626ms
+2024-12-16 17:07:31.835 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 63.9538ms
+2024-12-16 17:07:31.837 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-16 17:07:31.842 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-16 17:07:31.842 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-16 17:07:31.880 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 109.4538ms
+2024-12-16 17:07:31.880 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - 200 152034 text/css 109.7976ms
+2024-12-16 17:07:31.880 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.css - 200 202 text/css 109.9111ms
+2024-12-16 17:07:31.896 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-16 17:07:31.899 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 129.1509ms
+2024-12-16 17:07:31.945 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 146.0853ms
+2024-12-16 17:07:32.180 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:07:32.209 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:07:32.212 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:07:32.214 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 5.2983ms
+2024-12-16 17:07:32.218 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.7478ms
+2024-12-16 17:07:57.572 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/identity/v1/register - application/json 60
+2024-12-16 17:07:57.611 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:07:57.616 +05:00 [INF] Executing endpoint 'HTTP: POST api/identity/v1/register'
+2024-12-16 17:07:58.005 +05:00 [INF] Executed DbCommand (122ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-16 17:07:58.305 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Date), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 4000), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (DbType = Guid), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [DateOfBirth], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [Nationality], [NormalizedEmail], [NormalizedUserName], [OrganizationId], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2024-12-16 17:07:58.363 +05:00 [INF] Setting HTTP status code 200.
+2024-12-16 17:07:58.366 +05:00 [INF] Executed endpoint 'HTTP: POST api/identity/v1/register'
+2024-12-16 17:07:58.375 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/identity/v1/register - 200 0 null 802.7816ms
+2024-12-16 17:10:05.442 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:10:05.509 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 66.8882ms
+2024-12-16 17:10:05.539 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:10:05.539 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:10:05.539 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:10:05.547 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 8.3544ms
+2024-12-16 17:10:05.552 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 13.2443ms
+2024-12-16 17:10:05.584 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.4742ms
+2024-12-16 17:10:05.901 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:10:05.901 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:10:05.919 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:10:05.921 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 20.0065ms
+2024-12-16 17:10:05.940 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.4524ms
+2024-12-16 17:10:32.150 +05:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 17:10:32.413 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-16 17:10:32.584 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-16 17:10:32.784 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-16 17:10:32.855 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-16 17:10:32.856 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-16 17:10:32.924 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-16 17:10:32.927 +05:00 [INF] Hosting environment: Development
+2024-12-16 17:10:32.929 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-16 17:10:35.044 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-16 17:10:35.371 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 333.6667ms
+2024-12-16 17:10:35.382 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-16 17:10:41.751 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger - null null
+2024-12-16 17:10:41.823 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger - 301 0 null 73.0091ms
+2024-12-16 17:10:41.830 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:10:41.936 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 106.5611ms
+2024-12-16 17:10:41.944 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - null null
+2024-12-16 17:10:41.944 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.css - null null
+2024-12-16 17:10:41.944 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - null null
+2024-12-16 17:10:41.945 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:10:41.945 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-16 17:10:41.959 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:10:41.993 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-16 17:10:41.993 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 48.419ms
+2024-12-16 17:10:41.999 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.css - 200 202 text/css 55.1825ms
+2024-12-16 17:10:42.022 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-16 17:10:42.022 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-16 17:10:42.030 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 72.133ms
+2024-12-16 17:10:42.031 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 86.0349ms
+2024-12-16 17:10:42.031 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - 200 152034 text/css 87.1141ms
+2024-12-16 17:10:42.037 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:10:42.049 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-16 17:10:42.064 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 120.22ms
+2024-12-16 17:10:42.107 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.1263ms
+2024-12-16 17:10:42.317 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:10:42.339 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.8836ms
+2024-12-16 17:12:22.815 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 82
+2024-12-16 17:12:22.891 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:12:22.895 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-16 17:12:22.923 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:12:23.077 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:12:23.249 +05:00 [INF] Executed DbCommand (47ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-16 17:12:23.401 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-16 17:12:23.575 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-12-16 17:12:23.613 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-16 17:12:23.626 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-12-16 17:12:23.635 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-16 17:12:23.644 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 559.7015ms.
+2024-12-16 17:12:23.655 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 17:12:23.668 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 736.2119ms
+2024-12-16 17:12:23.673 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-16 17:12:23.684 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 200 null application/json; charset=utf-8 868.5899ms
+2024-12-16 17:12:34.253 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 82
+2024-12-16 17:12:34.284 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:12:34.288 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-16 17:12:34.290 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:12:34.334 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:12:34.421 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-16 17:12:34.431 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-16 17:12:34.543 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 205.4307ms.
+2024-12-16 17:12:34.549 +05:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String[], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-16 17:12:34.552 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 259.7139ms
+2024-12-16 17:12:34.554 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-16 17:12:34.555 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 401 null application/json; charset=utf-8 303.1094ms
+2024-12-16 17:18:17.523 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:18:17.578 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 55.5572ms
+2024-12-16 17:18:17.592 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:18:17.592 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:18:17.592 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:18:17.636 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 44.3111ms
+2024-12-16 17:18:17.638 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.7766ms
+2024-12-16 17:18:17.650 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 58.2129ms
+2024-12-16 17:18:17.920 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:18:17.934 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:18:17.941 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:18:17.944 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 9.0371ms
+2024-12-16 17:18:17.946 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.5691ms
+2024-12-16 17:18:30.198 +05:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 17:18:30.531 +05:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-16 17:18:30.935 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-16 17:18:31.207 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-16 17:18:31.378 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-16 17:18:31.380 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-16 17:18:31.474 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-16 17:18:31.476 +05:00 [INF] Hosting environment: Development
+2024-12-16 17:18:31.477 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-16 17:18:33.371 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-16 17:18:33.684 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 323.5555ms
+2024-12-16 17:18:33.693 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-16 17:18:53.598 +05:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 17:18:53.927 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-16 17:18:54.111 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-16 17:18:54.280 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-16 17:18:54.393 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-16 17:18:54.395 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-16 17:18:54.486 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-16 17:18:54.487 +05:00 [INF] Hosting environment: Development
+2024-12-16 17:18:54.488 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-16 17:18:56.190 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-16 17:18:56.471 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 287.3896ms
+2024-12-16 17:18:56.478 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-16 17:19:22.255 +05:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 17:19:22.536 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-16 17:19:22.738 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-16 17:19:22.908 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-16 17:19:22.988 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-16 17:19:22.991 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-16 17:19:23.081 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-16 17:19:23.084 +05:00 [INF] Hosting environment: Development
+2024-12-16 17:19:23.087 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-16 17:19:24.996 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-16 17:19:25.280 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 290.978ms
+2024-12-16 17:19:25.288 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-16 17:19:31.367 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger - null null
+2024-12-16 17:19:31.432 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger - 301 0 null 66.691ms
+2024-12-16 17:19:31.438 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:19:31.566 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 127.9784ms
+2024-12-16 17:19:31.576 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.css - null null
+2024-12-16 17:19:31.576 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - null null
+2024-12-16 17:19:31.577 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:19:31.577 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:19:31.577 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-16 17:19:31.577 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - null null
+2024-12-16 17:19:31.590 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 13.5453ms
+2024-12-16 17:19:31.612 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-16 17:19:31.636 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 58.9699ms
+2024-12-16 17:19:31.638 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.css - 200 202 text/css 61.9801ms
+2024-12-16 17:19:31.648 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-16 17:19:31.665 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-16 17:19:31.669 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-16 17:19:31.669 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - 200 152034 text/css 92.8846ms
+2024-12-16 17:19:31.671 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:19:31.671 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 94.8724ms
+2024-12-16 17:19:31.696 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 119.6643ms
+2024-12-16 17:19:31.773 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.8986ms
+2024-12-16 17:19:32.029 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:19:32.062 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.9899ms
+2024-12-16 17:20:01.453 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 82
+2024-12-16 17:20:01.506 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:20:01.518 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-16 17:20:01.548 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:20:01.690 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:20:01.887 +05:00 [INF] Executed DbCommand (46ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-12-16 17:20:02.029 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-12-16 17:20:02.213 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-12-16 17:20:02.253 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-16 17:20:02.266 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-12-16 17:20:02.276 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-12-16 17:20:02.289 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 589.7115ms.
+2024-12-16 17:20:02.297 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 17:20:02.314 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 753.1743ms
+2024-12-16 17:20:02.319 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2024-12-16 17:20:02.333 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 200 null application/json; charset=utf-8 884.5916ms
+2024-12-16 17:20:33.207 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - application/json 25
+2024-12-16 17:20:33.228 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:20:33.245 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:20:33.253 +05:00 [INF] Route matched with {action = "AddRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRole(DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:20:33.282 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:20:47.991 +05:00 [INF] Add new role: {"RoleName":"tesst","$type":"AssignRoleCommand"}
+2024-12-16 17:20:49.270 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:20:59.562 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:20:59.730 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-12-16 17:21:02.192 +05:00 [INF] Role created successfully: tesst
+2024-12-16 17:21:45.720 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 72433.1493ms.
+2024-12-16 17:21:45.735 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[DynamiqCore.Application.Users.Dtos.Role.AssignRoleDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 17:21:45.747 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) in 72490.1086ms
+2024-12-16 17:21:45.749 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:21:45.751 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - 200 null application/json; charset=utf-8 72545.018ms
+2024-12-16 17:30:34.450 +05:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 17:30:34.820 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-16 17:30:35.005 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-16 17:30:35.173 +05:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-16 17:30:35.266 +05:00 [INF] Now listening on: https://localhost:7217
+2024-12-16 17:30:35.267 +05:00 [INF] Now listening on: http://localhost:5137
+2024-12-16 17:30:35.405 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-16 17:30:35.408 +05:00 [INF] Hosting environment: Development
+2024-12-16 17:30:35.409 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-12-16 17:30:37.374 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2024-12-16 17:30:37.734 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 370.3677ms
+2024-12-16 17:30:37.743 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2024-12-16 17:30:55.781 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger - null null
+2024-12-16 17:30:55.848 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger - 301 0 null 68.182ms
+2024-12-16 17:30:55.853 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:30:55.968 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 115.3246ms
+2024-12-16 17:30:55.976 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - null null
+2024-12-16 17:30:55.976 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.css - null null
+2024-12-16 17:30:55.976 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - null null
+2024-12-16 17:30:55.977 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-16 17:30:55.977 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:30:55.977 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:30:56.020 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 42.1084ms
+2024-12-16 17:30:56.023 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 46.022ms
+2024-12-16 17:30:56.026 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-16 17:30:56.040 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.css - 200 202 text/css 63.11ms
+2024-12-16 17:30:56.049 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-16 17:30:56.056 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-16 17:30:56.058 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui.css - 200 152034 text/css 81.6414ms
+2024-12-16 17:30:56.062 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:30:56.062 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 85.9036ms
+2024-12-16 17:30:56.064 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-16 17:30:56.077 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 99.9451ms
+2024-12-16 17:30:56.122 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.0618ms
+2024-12-16 17:30:56.389 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:30:56.419 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.0612ms
+2024-12-16 17:31:05.078 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - application/json 24
+2024-12-16 17:31:05.092 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:31:05.105 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:31:05.150 +05:00 [INF] Route matched with {action = "AddRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRole(DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:31:05.324 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:31:08.507 +05:00 [INF] Add new role: {"RoleName":"dddd","$type":"AssignRoleCommand"}
+2024-12-16 17:31:09.543 +05:00 [INF] Executed DbCommand (58ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:31:10.349 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:31:10.545 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-12-16 17:31:11.866 +05:00 [INF] Role created successfully: dddd
+2024-12-16 17:31:17.120 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11787.8484ms.
+2024-12-16 17:31:17.137 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[DynamiqCore.Application.Users.Dtos.Role.AssignRoleDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 17:31:17.150 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) in 11989.0344ms
+2024-12-16 17:31:17.154 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:31:17.168 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - 200 null application/json; charset=utf-8 12090.3519ms
+2024-12-16 17:35:55.415 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:35:55.487 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 71.7486ms
+2024-12-16 17:35:55.504 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:35:55.505 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:35:55.505 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:35:55.509 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 5.1615ms
+2024-12-16 17:35:55.515 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 10.601ms
+2024-12-16 17:35:55.557 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.1731ms
+2024-12-16 17:35:55.861 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:35:55.874 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:35:55.881 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:35:55.884 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 11.8236ms
+2024-12-16 17:35:55.888 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.0743ms
+2024-12-16 17:36:20.281 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:36:20.348 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 66.9982ms
+2024-12-16 17:36:20.363 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:36:20.363 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:36:20.364 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:36:20.370 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 6.836ms
+2024-12-16 17:36:20.374 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 10.5523ms
+2024-12-16 17:36:20.410 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.2319ms
+2024-12-16 17:36:20.524 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:36:20.524 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:36:20.553 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:36:20.557 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.2445ms
+2024-12-16 17:36:20.574 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 50.3695ms
+2024-12-16 17:36:32.233 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - application/json 25
+2024-12-16 17:36:32.258 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:36:32.282 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:36:32.292 +05:00 [INF] Route matched with {action = "AddRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRole(DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:36:32.337 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:36:36.903 +05:00 [INF] Add new role: {"RoleName":"hello","$type":"AssignRoleCommand"}
+2024-12-16 17:36:37.673 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:36:38.455 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:36:38.491 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-12-16 17:36:39.199 +05:00 [INF] Role created successfully: hello
+2024-12-16 17:36:43.769 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11430.2377ms.
+2024-12-16 17:36:43.775 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Role.AssignRoleDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 17:36:43.795 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) in 11497.1685ms
+2024-12-16 17:36:43.799 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:36:43.801 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - 201 null application/json; charset=utf-8 11568.3442ms
+2024-12-16 17:37:45.583 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:37:45.638 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 54.8178ms
+2024-12-16 17:37:45.657 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:37:45.657 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:37:45.658 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:37:45.677 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 19.9699ms
+2024-12-16 17:37:45.681 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 23.4934ms
+2024-12-16 17:37:45.724 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.4127ms
+2024-12-16 17:37:45.806 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:37:45.806 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:37:45.810 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:37:45.817 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 11.2717ms
+2024-12-16 17:37:45.829 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.6519ms
+2024-12-16 17:38:05.184 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:38:05.284 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 101.0351ms
+2024-12-16 17:38:05.303 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:38:05.304 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:38:05.304 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:38:05.310 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 6.5738ms
+2024-12-16 17:38:05.314 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 10.4463ms
+2024-12-16 17:38:05.345 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.8907ms
+2024-12-16 17:38:05.499 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:38:05.499 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:38:05.509 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:38:05.512 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 13.1304ms
+2024-12-16 17:38:05.525 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.306ms
+2024-12-16 17:38:28.822 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:38:28.901 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 79.2514ms
+2024-12-16 17:38:28.919 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:38:28.925 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:38:28.935 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:38:28.942 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 23.8418ms
+2024-12-16 17:38:28.953 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 17.7999ms
+2024-12-16 17:38:28.978 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.7399ms
+2024-12-16 17:38:29.101 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:38:29.101 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:38:29.118 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:38:29.120 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 18.8452ms
+2024-12-16 17:38:29.129 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.0626ms
+2024-12-16 17:39:01.063 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:39:01.115 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 51.8019ms
+2024-12-16 17:39:01.135 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:39:01.135 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:39:01.154 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:39:01.176 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 22.5343ms
+2024-12-16 17:39:01.198 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 63.7685ms
+2024-12-16 17:39:01.203 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.6382ms
+2024-12-16 17:39:01.302 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:39:01.302 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:39:01.319 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:39:01.322 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.4445ms
+2024-12-16 17:39:01.324 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 22.233ms
+2024-12-16 17:39:17.865 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - application/json 27
+2024-12-16 17:39:17.874 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:39:17.877 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:39:17.884 +05:00 [INF] Route matched with {action = "AddRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRole(DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:39:17.929 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:39:21.730 +05:00 [INF] Add new role: {"RoleName":"test123","$type":"AssignRoleCommand"}
+2024-12-16 17:39:21.994 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:39:22.833 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:39:22.915 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-12-16 17:39:23.744 +05:00 [INF] Role created successfully: test123
+2024-12-16 17:39:26.167 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8233.5249ms.
+2024-12-16 17:39:26.173 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Role.AssignRoleDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 17:39:26.189 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) in 8300.3475ms
+2024-12-16 17:39:26.195 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:39:26.197 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - 201 null application/json; charset=utf-8 8332.5257ms
+2024-12-16 17:41:00.887 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:41:00.940 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 53.3363ms
+2024-12-16 17:41:00.955 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:41:00.955 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:41:00.956 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:41:00.971 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 15.4949ms
+2024-12-16 17:41:00.975 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 19.2862ms
+2024-12-16 17:41:01.014 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.4561ms
+2024-12-16 17:41:01.126 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:41:01.126 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:41:01.151 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:41:01.154 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 28.0868ms
+2024-12-16 17:41:01.164 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.2316ms
+2024-12-16 17:41:08.270 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:41:08.328 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 58.1264ms
+2024-12-16 17:41:08.347 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:41:08.347 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:41:08.347 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:41:08.365 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 17.8045ms
+2024-12-16 17:41:08.379 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 31.4197ms
+2024-12-16 17:41:08.395 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.0745ms
+2024-12-16 17:41:08.522 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:41:08.522 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:41:08.527 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:41:08.545 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 22.8911ms
+2024-12-16 17:41:08.558 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.6176ms
+2024-12-16 17:41:16.361 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - application/json 22
+2024-12-16 17:41:16.367 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:41:16.369 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:41:16.376 +05:00 [INF] Route matched with {action = "AddRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRole(DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:41:16.413 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:41:19.475 +05:00 [INF] Add new role: {"RoleName":"ss","$type":"AssignRoleCommand"}
+2024-12-16 17:41:19.489 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:41:19.495 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:41:19.503 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-12-16 17:41:19.507 +05:00 [INF] Role created successfully: ss
+2024-12-16 17:41:19.676 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) in 3296.3441ms
+2024-12-16 17:41:19.677 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:41:19.838 +05:00 [ERR] Invalid cast from 'System.String' to 'DynamiqCore.Application.Users.Dtos.Role.AssignRoleDto'.
+System.InvalidCastException: Invalid cast from 'System.String' to 'DynamiqCore.Application.Users.Dtos.Role.AssignRoleDto'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at DynamiqCore.Shared.Results.Result`1.Success(String message, Int32 statusCode) in D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\Results\Result.cs:line 30
+   at DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommandHandler.Handle(AssignRoleCommand request, CancellationToken cancellationToken)
+   at DynamiqCore.API.Controllers.AccountController.AddRole(AssignRoleCommand command)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at DynamiqCore.API.Middlewares.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+2024-12-16 17:41:19.933 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - 500 null null 3571.9975ms
+2024-12-16 17:41:50.898 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:41:50.959 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 61.0383ms
+2024-12-16 17:41:50.972 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:41:50.973 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:41:50.973 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:41:50.976 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 4.3739ms
+2024-12-16 17:41:50.995 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 22.0604ms
+2024-12-16 17:41:51.030 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.5248ms
+2024-12-16 17:41:51.112 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:41:51.119 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:41:51.127 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:41:51.129 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 10.2969ms
+2024-12-16 17:41:51.134 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.7455ms
+2024-12-16 17:43:56.951 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:43:57.023 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 72.8123ms
+2024-12-16 17:43:57.040 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:43:57.041 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:43:57.047 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:43:57.065 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 24.7441ms
+2024-12-16 17:43:57.074 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 27.3644ms
+2024-12-16 17:43:57.097 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.5839ms
+2024-12-16 17:43:57.185 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:43:57.185 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:43:57.206 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:43:57.213 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.2609ms
+2024-12-16 17:43:57.215 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 29.6807ms
+2024-12-16 17:44:09.036 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:44:09.137 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 101.085ms
+2024-12-16 17:44:09.152 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:44:09.152 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:44:09.152 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:44:09.158 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 5.9738ms
+2024-12-16 17:44:09.162 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 10.4532ms
+2024-12-16 17:44:09.180 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.2696ms
+2024-12-16 17:44:09.304 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:44:09.305 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:44:09.317 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:44:09.320 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 15.5219ms
+2024-12-16 17:44:09.333 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.1116ms
+2024-12-16 17:44:10.390 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:44:10.488 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 99.1623ms
+2024-12-16 17:44:10.515 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:44:10.515 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:44:10.515 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:44:10.565 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 49.8026ms
+2024-12-16 17:44:10.585 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 69.4906ms
+2024-12-16 17:44:10.591 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 75.6137ms
+2024-12-16 17:44:10.689 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:44:10.689 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:44:10.698 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:44:10.703 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 13.8249ms
+2024-12-16 17:44:10.709 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.9673ms
+2024-12-16 17:44:20.644 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - application/json 28
+2024-12-16 17:44:20.652 +05:00 [INF] CORS policy execution successful.
+2024-12-16 17:44:20.656 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:44:20.663 +05:00 [INF] Route matched with {action = "AddRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRole(DynamiqCore.Application.Users.Commands.AssignRole.AssignRoleCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2024-12-16 17:44:20.707 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) - Validation state: "Valid"
+2024-12-16 17:44:25.128 +05:00 [INF] Add new role: {"RoleName":"hello123","$type":"AssignRoleCommand"}
+2024-12-16 17:44:25.141 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:44:25.163 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-12-16 17:44:25.174 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (@p0, @p1, @p2, @p3);
+2024-12-16 17:44:25.183 +05:00 [INF] Role created successfully: hello123
+2024-12-16 17:44:25.185 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4476.2999ms.
+2024-12-16 17:44:25.190 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Role.AssignRoleDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 17:44:25.195 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API) in 4527.9648ms
+2024-12-16 17:44:25.198 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.AddRole (DynamiqCore.API)'
+2024-12-16 17:44:25.201 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/AddRole - 201 null application/json; charset=utf-8 4557.398ms
+2024-12-16 17:44:42.954 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2024-12-16 17:44:43.043 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 89.8297ms
+2024-12-16 17:44:43.057 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2024-12-16 17:44:43.057 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2024-12-16 17:44:43.058 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 17:44:43.065 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 8.2166ms
+2024-12-16 17:44:43.093 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 34.8896ms
+2024-12-16 17:44:43.097 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.5377ms
+2024-12-16 17:44:43.207 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2024-12-16 17:44:43.207 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2024-12-16 17:44:43.210 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-16 17:44:43.219 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 11.8653ms
+2024-12-16 17:44:43.229 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.811ms

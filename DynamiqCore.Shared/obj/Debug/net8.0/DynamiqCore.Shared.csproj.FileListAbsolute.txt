@@ -1,0 +1,11 @@
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\bin\Debug\net8.0\DynamiqCore.Shared.deps.json
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\bin\Debug\net8.0\DynamiqCore.Shared.dll
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\bin\Debug\net8.0\DynamiqCore.Shared.pdb
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\DynamiqCore.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\DynamiqCore.Shared.AssemblyInfoInputs.cache
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\DynamiqCore.Shared.AssemblyInfo.cs
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\DynamiqCore.Shared.csproj.CoreCompileInputs.cache
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\DynamiqCore.Shared.dll
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\refint\DynamiqCore.Shared.dll
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\DynamiqCore.Shared.pdb
+D:\Personal\Repos\DynamiqCore\DynamiqCore.Shared\obj\Debug\net8.0\ref\DynamiqCore.Shared.dll

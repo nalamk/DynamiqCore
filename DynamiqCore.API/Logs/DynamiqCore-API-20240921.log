@@ -1,0 +1,48 @@
+2024-09-21 22:44:43.604 +05:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-21 22:44:44.255 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-21 22:44:44.366 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-21 22:44:44.904 +05:00 [INF] Now listening on: http://localhost:5137
+2024-09-21 22:44:44.910 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-21 22:44:44.912 +05:00 [INF] Hosting environment: Development
+2024-09-21 22:44:44.913 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2024-09-21 22:44:46.510 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.html - null null
+2024-09-21 22:44:46.764 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.html - 200 null text/html;charset=utf-8 255.5846ms
+2024-09-21 22:44:46.867 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.css - null null
+2024-09-21 22:44:46.867 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui.css - null null
+2024-09-21 22:44:46.909 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-21 22:44:46.909 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-bundle.js - null null
+2024-09-21 22:44:46.917 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/index.js - null null
+2024-09-21 22:44:46.976 +05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-09-21 22:44:47.044 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-21 22:44:47.090 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-21 22:44:47.095 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.css - 200 202 text/css 228.3651ms
+2024-09-21 22:44:47.101 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/index.js - 200 null application/javascript;charset=utf-8 184.6282ms
+2024-09-21 22:44:47.149 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui.css - 200 152034 text/css 282.2349ms
+2024-09-21 22:44:47.244 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-21 22:44:47.247 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-standalone-preset.js - 200 230293 text/javascript 338.533ms
+2024-09-21 22:44:47.248 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/swagger-ui-bundle.js - 200 1452753 text/javascript 339.316ms
+2024-09-21 22:44:47.868 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - null null
+2024-09-21 22:44:47.915 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/swagger/favicon-32x32.png - null null
+2024-09-21 22:44:47.929 +05:00 [INF] The file /favicon-32x32.png was not modified
+2024-09-21 22:44:47.934 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/favicon-32x32.png - 304 null image/png 18.2604ms
+2024-09-21 22:44:48.224 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 356.1223ms
+2024-09-21 22:44:53.200 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/weatherforecast - null null
+2024-09-21 22:44:53.208 +05:00 [WRN] Failed to determine the https port for redirect.
+2024-09-21 22:44:53.216 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-21 22:44:53.276 +05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DynamiqCore.API.WeatherForecast] Get() on controller DynamiqCore.API.Controllers.WeatherForecastController (DynamiqCore.API).
+2024-09-21 22:44:53.292 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) - Validation state: "Valid"
+2024-09-21 22:44:53.306 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.3627ms.
+2024-09-21 22:44:53.338 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.API.WeatherForecast[]'.
+2024-09-21 22:44:53.376 +05:00 [INF] Executed action DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API) in 90.1192ms
+2024-09-21 22:44:53.378 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.WeatherForecastController.Get (DynamiqCore.API)'
+2024-09-21 22:44:53.380 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/weatherforecast - 200 null application/json; charset=utf-8 180.0448ms
+2024-09-21 22:44:53.946 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5137/favicon.ico - null null
+2024-09-21 22:44:53.951 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5137/favicon.ico - 404 0 null 4.8746ms
+2024-09-21 22:44:53.958 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5137/favicon.ico, Response status code: 404

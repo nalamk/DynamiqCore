@@ -1,0 +1,155 @@
+2025-01-10 08:00:08.117 +05:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-10 08:00:08.507 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-10 08:00:08.732 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-10 08:00:09.143 +05:00 [INF] Now listening on: https://localhost:7217
+2025-01-10 08:00:09.145 +05:00 [INF] Now listening on: http://localhost:5137
+2025-01-10 08:00:09.271 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-10 08:00:09.274 +05:00 [INF] Hosting environment: Development
+2025-01-10 08:00:09.276 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-01-10 08:00:11.938 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2025-01-10 08:00:12.678 +05:00 [INF] Executed DbCommand (105ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-01-10 08:00:12.844 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-01-10 08:00:12.902 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-10 08:00:12.954 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 1028.4376ms
+2025-01-10 08:00:12.970 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2025-01-10 08:00:17.411 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2025-01-10 08:00:17.612 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 200.8658ms
+2025-01-10 08:00:17.642 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-10 08:00:17.646 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2025-01-10 08:00:17.651 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2025-01-10 08:00:17.688 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 36.719ms
+2025-01-10 08:00:17.690 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 49.1026ms
+2025-01-10 08:00:17.758 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 112.008ms
+2025-01-10 08:00:17.829 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2025-01-10 08:00:17.864 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.3246ms
+2025-01-10 08:00:17.865 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - null null
+2025-01-10 08:00:17.892 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-01-10 08:00:17.895 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/favicon-32x32.png - 200 628 image/png 29.9702ms
+2025-01-10 08:00:36.287 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/organizations/v1 - null null
+2025-01-10 08:00:36.312 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SystemUser)
+2025-01-10 08:00:36.322 +05:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2025-01-10 08:00:36.327 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/organizations/v1 - 302 0 null 40.3775ms
+2025-01-10 08:00:36.330 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - null null
+2025-01-10 08:00:36.351 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - 404 0 null 21.2454ms
+2025-01-10 08:00:36.362 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/Account/AccessDenied, Response status code: 404
+2025-01-10 08:01:02.812 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/organizations/v1 - application/json 160
+2025-01-10 08:01:02.825 +05:00 [INF] CORS policy execution successful.
+2025-01-10 08:01:02.831 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SystemUser)
+2025-01-10 08:01:02.837 +05:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2025-01-10 08:01:02.840 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/organizations/v1 - 302 0 null 28.7032ms
+2025-01-10 08:01:02.844 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - null null
+2025-01-10 08:01:02.852 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - 404 0 null 7.8931ms
+2025-01-10 08:01:02.874 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/Account/AccessDenied, Response status code: 404
+2025-01-10 08:01:37.931 +05:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-10 08:01:38.214 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetRoles] AS [a]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-10 08:01:38.399 +05:00 [INF] User profile is available. Using 'C:\Users\naveed\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-10 08:01:38.702 +05:00 [INF] Now listening on: https://localhost:7217
+2025-01-10 08:01:38.706 +05:00 [INF] Now listening on: http://localhost:5137
+2025-01-10 08:01:38.797 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-10 08:01:38.801 +05:00 [INF] Hosting environment: Development
+2025-01-10 08:01:38.803 +05:00 [INF] Content root path: D:\Personal\Repos\DynamiqCore\DynamiqCore.API
+2025-01-10 08:01:41.965 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/weatherforecast - null null
+2025-01-10 08:01:42.391 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/weatherforecast - 404 0 null 435.3888ms
+2025-01-10 08:01:42.405 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/weatherforecast, Response status code: 404
+2025-01-10 08:02:06.051 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.html - null null
+2025-01-10 08:02:06.211 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.html - 200 null text/html;charset=utf-8 160.2435ms
+2025-01-10 08:02:06.227 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/index.js - null null
+2025-01-10 08:02:06.230 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-10 08:02:06.245 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/index.js - 200 null application/javascript;charset=utf-8 17.97ms
+2025-01-10 08:02:06.255 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/_vs/browserLink - null null
+2025-01-10 08:02:06.310 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_framework/aspnetcore-browser-refresh.js - 200 13766 application/javascript; charset=utf-8 84.5035ms
+2025-01-10 08:02:06.381 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/_vs/browserLink - 200 null text/javascript; charset=UTF-8 125.9817ms
+2025-01-10 08:02:06.439 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - null null
+2025-01-10 08:02:06.488 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.9726ms
+2025-01-10 08:02:18.058 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/account/v1/Login - application/json 84
+2025-01-10 08:02:18.076 +05:00 [INF] CORS policy execution successful.
+2025-01-10 08:02:18.088 +05:00 [INF] Executing endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-01-10 08:02:18.120 +05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(DynamiqCore.Application.Users.Commands.Login.LoginCommand) on controller DynamiqCore.API.Controllers.AccountController (DynamiqCore.API).
+2025-01-10 08:02:18.309 +05:00 [INF] Executing action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) - Validation state: "Valid"
+2025-01-10 08:02:23.339 +05:00 [INF] Executed DbCommand (50ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-01-10 08:02:23.460 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[DateOfBirth], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nationality], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[OrganizationId], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-01-10 08:02:23.677 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-01-10 08:02:23.717 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-10 08:02:23.732 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-10 08:02:23.738 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-01-10 08:02:24.913 +05:00 [INF] Executed action method DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6596.1441ms.
+2025-01-10 08:02:24.927 +05:00 [INF] Executing ObjectResult, writing value of type 'DynamiqCore.Shared.Results.Result`1[[DynamiqCore.Application.Users.Dtos.Login.LoginDto, DynamiqCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-10 08:02:24.944 +05:00 [INF] Executed action DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API) in 6816.735ms
+2025-01-10 08:02:24.950 +05:00 [INF] Executed endpoint 'DynamiqCore.API.Controllers.AccountController.Login (DynamiqCore.API)'
+2025-01-10 08:02:24.963 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/account/v1/Login - 200 null application/json; charset=utf-8 6904.745ms
+2025-01-10 08:02:52.101 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/organizations/v1 - null null
+2025-01-10 08:02:52.131 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SystemUser)
+2025-01-10 08:02:52.140 +05:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2025-01-10 08:02:52.143 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/organizations/v1 - 302 0 null 43.4916ms
+2025-01-10 08:02:52.147 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - null null
+2025-01-10 08:02:52.154 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - 404 0 null 7.5005ms
+2025-01-10 08:02:52.164 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/Account/AccessDenied, Response status code: 404
+2025-01-10 08:03:06.897 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/organizations/v1 - null null
+2025-01-10 08:03:06.926 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SystemUser)
+2025-01-10 08:03:06.928 +05:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2025-01-10 08:03:06.929 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/organizations/v1 - 302 0 null 32.8938ms
+2025-01-10 08:03:06.932 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - null null
+2025-01-10 08:03:06.943 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - 404 0 null 11.2173ms
+2025-01-10 08:03:06.949 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/Account/AccessDenied, Response status code: 404
+2025-01-10 08:03:08.341 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/api/organizations/v1 - null null
+2025-01-10 08:03:08.352 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SystemUser)
+2025-01-10 08:03:08.357 +05:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2025-01-10 08:03:08.359 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/api/organizations/v1 - 302 0 null 18.43ms
+2025-01-10 08:03:08.362 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - null null
+2025-01-10 08:03:08.373 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - 404 0 null 11.6698ms
+2025-01-10 08:03:08.381 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/Account/AccessDenied, Response status code: 404
+2025-01-10 08:03:28.129 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7217/api/organizations/v1 - application/json 164
+2025-01-10 08:03:28.135 +05:00 [INF] CORS policy execution successful.
+2025-01-10 08:03:28.138 +05:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SystemUser)
+2025-01-10 08:03:28.141 +05:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2025-01-10 08:03:28.143 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7217/api/organizations/v1 - 302 0 null 14.8066ms
+2025-01-10 08:03:28.146 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - null null
+2025-01-10 08:03:28.157 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7217/Account/AccessDenied?ReturnUrl=%2Fapi%2Forganizations%2Fv1 - 404 0 null 11.5175ms
+2025-01-10 08:03:28.164 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7217/Account/AccessDenied, Response status code: 404
